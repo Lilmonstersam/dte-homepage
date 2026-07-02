@@ -22,7 +22,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -43,17 +43,17 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     color:var(--dte-ink);background:var(--dte-white);line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,h4{font-family:'Oswald','Inter',sans-serif;font-weight:700;line-height:1.1;letter-spacing:.01em;text-transform:uppercase}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;line-height:1.15;letter-spacing:-.01em;text-transform:uppercase}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .btn{
     display:inline-flex;align-items:center;gap:.5rem;font-weight:700;
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;
+    font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.03em;
     padding:14px 28px;border-radius:var(--radius);border:2px solid transparent;
     cursor:pointer;transition:.18s ease;font-size:15px;
   }
@@ -65,11 +65,11 @@
   .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
   .btn-outline{background:transparent;color:var(--dte-ink);border-color:var(--dte-ink)}
   .btn-outline:hover{background:var(--dte-ink);color:#fff}
-  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em;
-    font-size:13px;font-weight:600;color:var(--dte-yellow)}
+  .eyebrow{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.14em;
+    font-size:14px;font-weight:700;color:var(--dte-yellow);display:block;margin-bottom:14px}
   .section{padding:80px 0}
-  .section-head{text-align:center;max-width:760px;margin:0 auto 48px}
-  .section-head h2{font-size:38px;margin-bottom:14px}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 56px}
+  .section-head h2{font-size:38px;margin-bottom:20px}
   .section-head p{color:var(--dte-grey);font-size:17px}
 
   /* ---------- TOP UTILITY BAR ---------- */
@@ -83,12 +83,12 @@
 
   /* ---------- HEADER / NAV ---------- */
   header.main{background:#fff;border-bottom:1px solid var(--dte-line);position:sticky;top:0;z-index:60;box-shadow:var(--shadow-sm)}
-  header.main .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+  header.main .wrap{display:flex;align-items:center;justify-content:space-between;height:100px;gap:28px}
   .logo img{height:46px}
-  nav.primary>ul{list-style:none;display:flex;gap:28px;align-items:center;height:84px}
+  nav.primary>ul{list-style:none;display:flex;gap:40px;align-items:center;height:100px}
   nav.primary>ul>li{position:static;display:flex;align-items:center;height:100%}
-  nav.primary>ul>li>a{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
-    font-size:15px;letter-spacing:.03em;height:100%;display:flex;align-items:center;position:relative}
+  nav.primary>ul>li>a{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:15px;letter-spacing:.03em;height:100%;display:flex;align-items:center;position:relative;padding:0 2px}
   nav.primary>ul>li>a:hover{color:var(--dte-yellow)}
   nav.primary>ul>li>a.has-mega::after{content:"▾";font-size:11px;margin-left:5px;color:var(--dte-grey);transition:.15s}
   nav.primary>ul>li:hover>a.has-mega::after{transform:rotate(180deg);color:var(--dte-yellow)}
@@ -103,27 +103,27 @@
   nav.primary>ul>li:hover .mega{opacity:1;visibility:visible;transform:translateY(0)}
   .mega-inner{max-width:var(--maxw);margin:0 auto;padding:30px 24px 34px;
     display:grid;grid-template-columns:repeat(5,1fr);gap:14px 24px}
-  .mega-col-head{grid-column:1/-1;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;
+  .mega-col-head{grid-column:1/-1;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;
     font-size:13px;letter-spacing:.1em;color:var(--dte-grey);margin-bottom:2px;padding-bottom:8px;border-bottom:1px solid var(--dte-line)}
   .mega-item{display:flex;align-items:center;gap:11px;padding:9px 8px;border-radius:var(--radius);transition:.13s}
   .mega-item:hover{background:var(--dte-bg)}
   .mega-item .mi-thumb{width:48px;height:42px;flex:0 0 48px;background:#f0f0f0 center/contain no-repeat;border-radius:4px;border:1px solid var(--dte-line)}
-  .mega-item .mi-label{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:13.5px;line-height:1.15;letter-spacing:.01em;color:var(--dte-ink)}
+  .mega-item .mi-label{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:600;font-size:13.5px;line-height:1.15;letter-spacing:.01em;color:var(--dte-ink)}
   .mega-item:hover .mi-label{color:var(--dte-yellow)}
   .mega-foot{grid-column:1/-1;margin-top:10px;padding-top:14px;border-top:1px solid var(--dte-line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-  .mega-foot a.view-all{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--dte-ink)}
+  .mega-foot a.view-all{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--dte-ink)}
   .mega-foot a.view-all:hover{color:var(--dte-yellow)}
   .mega-foot .mf-note{font-size:13px;color:var(--dte-grey)}
   /* simple (non-grid) mega for Brands */
   .mega.simple .mega-inner{grid-template-columns:repeat(3,1fr)}
   .brand-mega-card{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--dte-line);border-radius:var(--radius);transition:.15s}
   .brand-mega-card:hover{border-color:var(--dte-yellow);background:var(--dte-bg)}
-  .brand-mega-card .bm-name{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;font-size:18px}
+  .brand-mega-card .bm-name{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:18px}
   .brand-mega-card .bm-desc{font-size:13px;color:var(--dte-grey)}
 
-  .nav-cta{display:flex;gap:12px;align-items:center}
-  .phone-cta{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;color:var(--dte-ink);display:flex;align-items:center;gap:7px}
-  .phone-cta:hover{color:var(--dte-yellow)}
+  .nav-cta{display:flex;gap:20px;align-items:center}
+  .phone-cta{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:14.5px;color:var(--dte-grey);display:flex;align-items:center;gap:6px}
+  .phone-cta:hover{color:var(--dte-ink)}
   .burger{display:none;background:none;border:none;font-size:26px;cursor:pointer}
 
   /* ---------- HERO ---------- */
@@ -132,16 +132,17 @@
     background:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/20230215-Greentec-Quadsaw-Marathon-Man-Go-010-Resized-scaled.jpg') center/cover no-repeat;
     transform:scale(1);animation:heroZoom 20s ease-out forwards}
   .hero-overlay{position:absolute;inset:0;z-index:1;
-    background:linear-gradient(90deg,rgba(15,15,15,.88) 0%,rgba(15,15,15,.58) 50%,rgba(15,15,15,.22) 100%)}
+    background:linear-gradient(90deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.74) 45%,rgba(8,8,8,.42) 100%)}
   .hero .wrap{position:relative;z-index:2}
   @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
   @media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
-  .hero-inner{max-width:660px;text-align:left}
-  .hero h1{font-size:60px;line-height:1.02;margin:16px 0 18px}
+  .hero-inner{max-width:660px;text-align:left;border-left:3px solid var(--dte-yellow);padding-left:28px}
+  .hero .eyebrow{font-size:16px;font-weight:800;letter-spacing:.16em;color:#FFD673;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+  .hero h1{font-size:60px;line-height:1.05;margin:0 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
   .hero h1 .hl{color:var(--dte-yellow)}
-  .hero p.lede{font-size:19px;color:#e8e8e8;margin-bottom:30px;max-width:560px}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
-  .hero-trust{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:#cfcfcf}
+  .hero p.lede{font-size:19px;color:#f0f0f0;margin-bottom:32px;max-width:560px;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+  .hero-trust{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:#e2e2e2}
   .hero-trust span{display:flex;align-items:center;gap:8px}
   .hero-trust b{color:#fff}
 
@@ -149,10 +150,10 @@
   .finder{background:var(--dte-ink);color:#fff;padding:0}
   .finder .wrap{padding:36px 24px}
   .finder-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-  .finder-head h2{font-size:26px;color:#fff}
+  .finder-head h2{font-size:26px;color:#fff;margin-bottom:8px}
   .finder-head p{color:#bdbdbd;font-size:15px}
   .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-  .tab{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.04em;
+  .tab{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.04em;
     font-size:14px;padding:11px 20px;border-radius:var(--radius);cursor:pointer;
     background:#2e2e2e;color:#ddd;border:2px solid transparent;transition:.15s}
   .tab.active{background:var(--dte-yellow);color:var(--dte-ink)}
@@ -163,9 +164,9 @@
   .fcard{background:#262626;border:1px solid #383838;border-radius:var(--radius);padding:18px;
     transition:.18s;display:flex;flex-direction:column;gap:6px;min-height:108px}
   .fcard:hover{background:#2f2f2f;border-color:var(--dte-yellow);transform:translateY(-3px)}
-  .fcard .fc-title{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;font-size:16px;color:#fff}
+  .fcard .fc-title{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:16px;color:#fff}
   .fcard .fc-sub{font-size:13px;color:#a8a8a8}
-  .fcard .fc-arrow{margin-top:auto;color:var(--dte-yellow);font-weight:700;font-size:13px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+  .fcard .fc-arrow{margin-top:auto;color:var(--dte-yellow);font-weight:700;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em}
 
   /* ---------- MACHINE TYPE GRID ---------- */
   .machines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -174,11 +175,11 @@
   .mcard:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
   .mcard .mc-img{height:180px;background:#eee center/cover no-repeat;position:relative}
   .mcard .mc-tag{position:absolute;top:10px;left:10px;background:var(--dte-yellow);color:var(--dte-ink);
-    font-family:'Oswald',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:3px}
+    font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:3px}
   .mcard .mc-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
   .mcard h3{font-size:19px}
   .mcard p{font-size:14px;color:var(--dte-grey);flex:1}
-  .mcard .mc-link{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;
+  .mcard .mc-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;
     color:var(--dte-ink);letter-spacing:.04em;display:inline-flex;align-items:center;gap:6px}
   .mcard .mc-link:hover{color:var(--dte-yellow)}
 
@@ -188,57 +189,64 @@
   .acard{position:relative;border-radius:var(--radius);overflow:hidden;min-height:280px;display:flex;align-items:flex-end;
     color:#fff;box-shadow:var(--shadow-sm);transition:.2s}
   .acard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .acard::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.82) 100%);z-index:1}
+  .acard::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,.20) 35%,rgba(0,0,0,.92) 100%);z-index:1}
   .acard .ac-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.4s}
   .acard:hover .ac-bg{transform:scale(1.06)}
   .acard .ac-body{position:relative;z-index:2;padding:22px}
-  .acard h3{font-size:23px;margin-bottom:6px}
-  .acard p{font-size:14px;color:#e0e0e0}
-  .acard .ac-link{margin-top:10px;display:inline-block;font-family:'Oswald',sans-serif;font-weight:700;
+  .acard h3{font-size:23px;margin-bottom:8px;text-shadow:0 2px 6px rgba(0,0,0,.65)}
+  .acard p{font-size:14px;color:#f0f0f0;text-shadow:0 1px 4px rgba(0,0,0,.65)}
+  .acard .ac-link{margin-top:10px;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;
     text-transform:uppercase;font-size:13px;color:var(--dte-yellow);letter-spacing:.04em}
 
   /* ---------- BRANDS STRIP ---------- */
   .brands{text-align:center}
-  .brand-row{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:14px}
-  .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);padding:24px 34px;min-width:200px;
-    transition:.18s;background:#fff;text-align:center}
-  .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow-sm)}
-  .brand-pill .bp-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em}
-  .brand-pill .bp-desc{font-size:13px;color:var(--dte-grey);margin-top:4px}
+  .brand-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:14px;text-align:left}
+  .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
+    transition:.2s;background:#fff;box-shadow:var(--shadow-sm)}
+  .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow);transform:translateY(-4px)}
+  .brand-pill .bp-img{height:150px;background:#111 center/cover no-repeat}
+  .brand-pill .bp-body{padding:22px 24px 26px}
+  .brand-pill .bp-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:.01em;display:block;margin-bottom:6px}
+  .brand-pill .bp-desc{font-size:13.5px;color:var(--dte-grey);display:block;margin-bottom:14px}
+  .brand-pill .bp-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:12.5px;letter-spacing:.04em;color:var(--dte-ink)}
+  .brand-pill:hover .bp-link{color:var(--dte-yellow-hover)}
 
   /* ---------- WHY DTE / STATS ---------- */
   .why{background:var(--dte-ink);color:#fff}
-  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
-  .why h2{font-size:36px;margin-bottom:18px}
-  .why p{color:#cfcfcf;font-size:16px;margin-bottom:16px}
-  .why .why-quote{border-left:3px solid var(--dte-yellow);padding-left:18px;font-style:italic;color:#fff;font-size:18px;margin:24px 0}
-  .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .stat{background:#262626;border:1px solid #383838;border-radius:var(--radius);padding:26px 22px;text-align:center}
-  .stat .s-num{font-family:'Oswald',sans-serif;font-weight:700;font-size:40px;color:var(--dte-yellow);line-height:1}
-  .stat .s-label{font-size:14px;color:#c4c4c4;margin-top:8px}
+  .why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .why h2{font-size:36px;margin-bottom:22px}
+  .why p{color:#cfcfcf;font-size:16px;margin-bottom:18px}
+  .why .why-quote{border-left:3px solid var(--dte-yellow);padding-left:18px;font-style:italic;color:#fff;font-size:18px;margin:28px 0}
+  .stats-inline{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 34px}
+  .stat{background:#262626;border:1px solid #383838;border-radius:var(--radius);padding:22px 20px;text-align:center}
+  .stat .s-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:36px;color:var(--dte-yellow);line-height:1}
+  .stat .s-label{font-size:13.5px;color:#c4c4c4;margin-top:8px}
+  .why-image{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);align-self:stretch;min-height:380px}
+  .why-image img{width:100%;height:100%;object-fit:cover;display:block}
 
   /* ---------- TESTIMONIALS ---------- */
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .tcard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
   .tcard .stars{color:var(--dte-yellow);letter-spacing:2px;font-size:16px}
   .tcard p{font-size:15px;color:#444;flex:1}
-  .tcard .t-name{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:15px}
+  .tcard .t-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:15px}
   .tcard .t-role{font-size:13px;color:var(--dte-grey)}
 
   /* ---------- LEAD / CTA BAND ---------- */
-  .lead{background:var(--dte-yellow);color:var(--dte-ink)}
+  .lead{background:linear-gradient(135deg,#151515 0%,#262626 100%);color:#fff;padding:100px 0}
   .lead .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:46px;align-items:center}
-  .lead h2{font-size:38px;margin-bottom:12px}
-  .lead p{font-size:17px;max-width:480px;margin-bottom:22px}
+  .lead .eyebrow{color:var(--dte-yellow)}
+  .lead h2{font-size:38px;margin-bottom:18px;color:#fff}
+  .lead p{font-size:17px;max-width:480px;margin-bottom:24px;color:#d6d6d6}
   .lead-ctas{display:flex;gap:14px;flex-wrap:wrap}
-  .lead .phone-big{font-family:'Oswald',sans-serif;font-weight:700;font-size:30px;display:inline-flex;align-items:center;gap:10px}
-  .quote-box{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-  .quote-box h3{font-size:22px;margin-bottom:6px}
-  .quote-box .qb-sub{font-size:14px;color:var(--dte-grey);margin-bottom:18px;font-family:'Inter';text-transform:none;font-weight:400}
-  .quote-box .field{margin-bottom:13px}
-  .quote-box label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
-  .quote-box input,.quote-box select{width:100%;padding:11px 13px;border:1px solid var(--dte-line);border-radius:var(--radius);font-size:15px;font-family:inherit}
-  .quote-box .qb-note{font-size:12px;color:var(--dte-grey);margin-top:6px;text-align:center}
+  .lead .phone-big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:30px;display:inline-flex;align-items:center;gap:10px;color:var(--dte-yellow)}
+  .quote-box{background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}
+  .quote-box h3{font-size:22px;margin-bottom:10px}
+  .quote-box .qb-sub{font-size:14px;color:var(--dte-grey);margin-bottom:26px;font-family:'Plus Jakarta Sans';text-transform:none;font-weight:400}
+  .quote-box .field{margin-bottom:18px}
+  .quote-box label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}
+  .quote-box input,.quote-box select{width:100%;padding:12px 14px;border:1px solid var(--dte-line);border-radius:var(--radius);font-size:15px;font-family:inherit}
+  .quote-box .qb-note{font-size:12px;color:var(--dte-grey);margin-top:14px;text-align:center}
 
   /* ---------- BLOG ---------- */
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -248,8 +256,10 @@
   .bcard .b-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
   .bcard h3{font-size:17px;line-height:1.25}
   .bcard p{font-size:14px;color:var(--dte-grey);flex:1}
-  .bcard .b-link{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.04em}
-  .bcard .b-link:hover{color:var(--dte-yellow)}
+  .bcard .b-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.04em;
+    color:var(--dte-ink);display:inline-flex;align-items:center;gap:6px;width:fit-content;
+    padding-bottom:3px;border-bottom:2px solid var(--dte-yellow)}
+  .bcard .b-link:hover{color:var(--dte-yellow-hover);border-color:var(--dte-yellow-hover)}
 
   /* ---------- FOOTER ---------- */
   footer{background:#111;color:#bdbdbd;padding:64px 0 28px}
@@ -260,11 +270,11 @@
   footer a:hover{color:var(--dte-yellow)}
   footer .f-logo img{height:44px;margin-bottom:16px}
   footer .f-intro{font-size:14px;max-width:340px;margin-bottom:16px}
-  footer .f-contact a{color:var(--dte-yellow);font-weight:600;font-family:'Oswald',sans-serif;font-size:18px}
+  footer .f-contact a{color:var(--dte-yellow);font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;font-size:18px}
   .foot-bottom{border-top:1px solid #2a2a2a;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#888}
 
   /* ---------- MOCK-UP REVIEW BANNER ---------- */
-  .mockbanner{background:#222;color:#f0c040;text-align:center;font-size:12.5px;padding:7px 16px;font-family:'Oswald',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+  .mockbanner{background:#222;color:#f0c040;text-align:center;font-size:12.5px;padding:7px 16px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase}
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:1100px){
@@ -278,12 +288,13 @@
   }
   @media(max-width:640px){
     .section{padding:54px 0}
-    .machines-grid,.apps-grid,.finder-panel.active,.finder-grid,.testi-grid,.blog-grid,.foot-grid{grid-template-columns:1fr}
+    .machines-grid,.apps-grid,.finder-panel.active,.finder-grid,.testi-grid,.blog-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
     .hero h1{font-size:38px}
     .hero{min-height:520px}
     .section-head h2,.lead h2,.why h2{font-size:28px}
     .topbar .tb-left{gap:14px;font-size:12px}
-    .stats{grid-template-columns:1fr 1fr}
+    .stats-inline{grid-template-columns:1fr 1fr}
+    .why-image{min-height:220px}
   }
 
   /* ---------- MOBILE DRAWER ---------- */
@@ -293,8 +304,8 @@
   .drawer-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:190;opacity:0;visibility:hidden;transition:.2s}
   .drawer-backdrop.open{opacity:1;visibility:visible}
   .drawer .dr-close{background:none;border:none;color:#fff;font-size:26px;cursor:pointer;float:right}
-  .drawer h4{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.1em;color:var(--dte-yellow);margin:22px 0 8px}
-  .drawer a{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:15px;padding:8px 0;color:#eee;border-bottom:1px solid #2e2e2e}
+  .drawer h4{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.1em;color:var(--dte-yellow);margin:22px 0 8px}
+  .drawer a{display:block;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-size:15px;padding:8px 0;color:#eee;border-bottom:1px solid #2e2e2e}
   .drawer a:hover{color:var(--dte-yellow)}
   .drawer .dr-cta{margin-top:24px}
   @media(max-width:1100px){.drawer{display:block}}
@@ -606,9 +617,30 @@
       <p>We partner with the brands that meet our stringent quality standards, as the exclusive Australia &amp; New Zealand distributor.</p>
     </div>
     <div class="brand-row">
-      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/greentec/"><div class="bp-name">Greentec</div><div class="bp-desc">Boom arms · Quadsaws · Cutterbars</div></a>
-      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/virnig/"><div class="bp-name">Virnig</div><div class="bp-desc">Skid steer &amp; excavator attachments</div></a>
-      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/"><div class="bp-name">Niubo</div><div class="bp-desc">Tractor · Skid steer · Excavator mulchers</div></a>
+      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/greentec/">
+        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
+        <div class="bp-body">
+          <span class="bp-name">Greentec</span>
+          <span class="bp-desc">Boom arms · Quadsaws · Cutterbars</span>
+          <span class="bp-link">View Range →</span>
+        </div>
+      </a>
+      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/virnig/">
+        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></div>
+        <div class="bp-body">
+          <span class="bp-name">Virnig</span>
+          <span class="bp-desc">Skid steer &amp; excavator attachments</span>
+          <span class="bp-link">View Range →</span>
+        </div>
+      </a>
+      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">
+        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FMR-NIUBO-Diamond-Mulcher-300x187.png')"></div>
+        <div class="bp-body">
+          <span class="bp-name">Niubo</span>
+          <span class="bp-desc">Tractor · Skid steer · Excavator mulchers</span>
+          <span class="bp-link">View Range →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -623,13 +655,16 @@
         <p>We're driven by a desire to constantly rethink the day-to-day and find ways to improve our customers' operations. Everything we offer is tried, tested and proven for Australian conditions.</p>
         <p>We combine passion, integrity and know-how to deliver products and a customer experience that exceed expectations, backed by setup, delivery and after-sales support.</p>
         <div class="why-quote">"I'd liken it to finding a Gold Nugget." Alf Pappalardo, Marathon Man Go</div>
+        <div class="stats-inline">
+          <div class="stat"><div class="s-num">50+</div><div class="s-label">Years combined experience</div></div>
+          <div class="stat"><div class="s-num">3</div><div class="s-label">World-leading brand partners</div></div>
+          <div class="stat"><div class="s-num">AU&amp;NZ</div><div class="s-label">Distribution &amp; support</div></div>
+          <div class="stat"><div class="s-num">2019</div><div class="s-label">AgriTechnica innovation medal</div></div>
+        </div>
         <a class="btn btn-primary" href="https://www.dte-equipment.com.au/about/">About DTE Equipment</a>
       </div>
-      <div class="stats">
-        <div class="stat"><div class="s-num">50+</div><div class="s-label">Years combined experience</div></div>
-        <div class="stat"><div class="s-num">3</div><div class="s-label">World-leading brand partners</div></div>
-        <div class="stat"><div class="s-num">AU&amp;NZ</div><div class="s-label">Distribution &amp; support</div></div>
-        <div class="stat"><div class="s-num">2019</div><div class="s-label">AgriTechnica innovation medal</div></div>
+      <div class="why-image">
+        <img src="https://www.dte-equipment.com.au/wp-content/uploads/2023/09/DSC_4900-scaled.jpg" alt="DTE Equipment machinery working smarter in the field">
       </div>
     </div>
   </div>
@@ -666,15 +701,15 @@
 <section class="lead" id="lead">
   <div class="wrap">
     <div>
-      <span class="eyebrow" style="color:var(--dte-ink)">Work Smarter</span>
+      <span class="eyebrow">Work Smarter</span>
       <h2>Talk to a Specialist Today</h2>
       <p>Tell us what you're working on and we'll match you to the right machine, with honest advice on fit, ROI and carrier requirements. Phone is fastest.</p>
       <div class="lead-ctas">
         <a class="phone-big" href="tel:0753158020">☎ 07 5315 8020</a>
       </div>
-      <div class="lead-ctas" style="margin-top:18px">
-        <a class="btn btn-dark" href="https://www.dte-equipment.com.au/downloads/">Download Brochure</a>
-        <a class="btn btn-outline" href="https://www.dte-equipment.com.au/contact/">Book a Discovery Call</a>
+      <div class="lead-ctas" style="margin-top:20px">
+        <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/downloads/">Download Brochure</a>
+        <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/contact/">Book a Discovery Call</a>
       </div>
     </div>
     <div class="quote-box">

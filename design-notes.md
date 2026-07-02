@@ -11,8 +11,8 @@ Sampled directly from the live site so the mock-up reads as "DTE", not a generic
 | Primary amber | `#F0A020` | Sampled from the live logo (the "gold nugget" brand colour) |
 | Ink / near-black | `#1A1A1A` | Logo + nav |
 | Theme background | `#F5F5F5` | Live `theme-color` meta |
-| Display type | Oswald (condensed, uppercase) | Matches the live site's heavy condensed headings |
-| Body type | Inter | Clean neutral substitute for the live body face |
+| Display type | Plus Jakarta Sans, weight 800 (uppercase via CSS) | Confirmed as the live site's actual typeface (checked computed styles on dte-equipment.com.au: h1–h4, nav and body all render in Plus Jakarta Sans) |
+| Body type | Plus Jakarta Sans, weight 400 | Matches live site exactly, was previously Inter as a placeholder — corrected in the July 2026 revision |
 | Logo | Live black/yellow + white/yellow PNGs | Hotlinked from WordPress |
 
 Em dashes avoided throughout the copy; British English spelling used (optimise, colour, organisation).
@@ -80,3 +80,17 @@ Keeps the latest-posts pattern but reframes as "Resources & Buyer Guides", setti
 - Product/Organisation **schema markup** — flagged as a separate deliverable (Slide 6 medium #5).
 - The mega-menu product taxonomy (kept as simple nav here; the finder carries the load).
 - Final production photography (see `image-assets.md`).
+
+## Revision — July 2026 client feedback
+
+Round of edits applied against client feedback on the first draft:
+
+- **Typography**: swapped the placeholder Oswald + Inter pairing for **Plus Jakarta Sans**, confirmed via the live site's computed styles as the actual typeface in use (headings 800, nav/labels 700, body 400).
+- **Header**: taller nav row (84px → 100px) and wider item gaps (28px → 40px) for breathing room; phone number restyled as a quiet secondary link so "Get a Quote" reads as the strongest CTA.
+- **Hero**: eyebrow now larger, bolder and a lighter gold with a text-shadow for guaranteed contrast; overlay gradient darkened; paragraph gets a text-shadow safety net; content block pinned to a yellow left-rule (matching the Why DTE quote motif) so it reads as anchored rather than floating.
+- **Shop by Application**: darkened the image overlay and added text-shadows so card copy stays legible regardless of the photo underneath.
+- **Why DTE**: stats moved out of the right-hand grid and into the copy column (below the quote, above the CTA); the right column is now a supporting photo; more vertical space throughout.
+- **Market-Leading Partners**: brand pills upgraded to full cards with a product photo, description and "View Range" link, replacing the plain text pills.
+- **Quote/lead section**: background changed from a solid yellow block to a dark gradient (yellow now used only for the phone number, the accent left-rule and the primary button); added generous section and quote-box padding.
+- **Latest From DTE**: "Read More" links now carry a permanent yellow underline so they read as links at rest, not just on hover.
+- **Sitewide**: fixed the root cause of the cramped eyebrow/heading spacing — `.eyebrow` was an inline `<span>` so its margin was being ignored by the browser; it's now block-level with its own margin, which fixes the spacing everywhere the class is used.
