@@ -299,7 +299,8 @@
     .topbar .tb-left{gap:14px;font-size:12px}
     .stats-inline{grid-template-columns:1fr 1fr}
     .why-image{min-height:220px}
-    .mobile-cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--dte-line);box-shadow:0 -6px 24px rgba(0,0,0,.16)}
+    .mobile-cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--dte-line);box-shadow:0 -6px 24px rgba(0,0,0,.16);opacity:0;pointer-events:none;transform:translateY(110%);transition:transform .22s ease,opacity .18s ease}
+    .mobile-cta-bar.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
     .mobile-cta-bar .btn{justify-content:center;min-height:48px;padding:12px 14px;font-size:13px;white-space:nowrap}
     .mobile-cta-bar .btn-dark{min-width:118px}
   }
@@ -832,6 +833,32 @@
   burger.addEventListener('click',openDrawer);
   drClose.addEventListener('click',closeDrawer);
   backdrop.addEventListener('click',closeDrawer);
+
+  // Mobile sticky CTA appears after the finder section and hides while scrolling down
+  var mobileCta=document.querySelector('.mobile-cta-bar'),
+      finder=document.getElementById('finder'),
+      lastScrollY=window.pageYOffset||document.documentElement.scrollTop,
+      ticking=false,
+      mobileQuery=window.matchMedia('(max-width: 640px)');
+  function updateMobileCta(){
+    if(!mobileCta||!finder){return}
+    var currentY=window.pageYOffset||document.documentElement.scrollTop,
+        finderBottom=finder.offsetTop+finder.offsetHeight,
+        pastFinder=currentY>finderBottom,
+        scrollingDown=currentY>lastScrollY;
+    mobileCta.classList.toggle('is-visible',mobileQuery.matches&&pastFinder&&!scrollingDown);
+    lastScrollY=Math.max(currentY,0);
+    ticking=false;
+  }
+  function requestMobileCtaUpdate(){
+    if(!ticking){
+      window.requestAnimationFrame(updateMobileCta);
+      ticking=true;
+    }
+  }
+  window.addEventListener('scroll',requestMobileCtaUpdate,{passive:true});
+  window.addEventListener('resize',requestMobileCtaUpdate);
+  updateMobileCta();
 </script>
 </body>
 </html>
