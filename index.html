@@ -111,6 +111,9 @@
   .mega-item .mi-thumb{width:48px;height:42px;flex:0 0 48px;background:#f0f0f0 center/contain no-repeat;border-radius:4px;border:1px solid var(--dte-line)}
   .mega-item .mi-label{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:600;font-size:13.5px;line-height:1.15;letter-spacing:.01em;color:var(--dte-ink)}
   .mega-item:hover .mi-label{color:var(--dte-yellow)}
+  .mi-tbc{display:inline-block;margin-left:7px;background:#f5f5f5;border:1px dashed #9a9a9a;color:var(--dte-grey);
+    font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;
+    padding:1px 6px;border-radius:3px;white-space:nowrap} /* mock-up marker: page still to be built */
   .mega-foot{grid-column:1/-1;margin-top:10px;padding-top:14px;border-top:1px solid var(--dte-line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
   .mega-foot a.view-all{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--dte-ink)}
   .mega-foot a.view-all:hover{color:var(--dte-yellow)}
@@ -132,7 +135,7 @@
     transform:scale(1);animation:heroZoom 20s ease-out forwards}
   .hero-overlay{position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.74) 45%,rgba(8,8,8,.42) 100%)}
-  .hero .wrap{position:relative;z-index:2}
+  .hero .wrap{position:relative;z-index:2;width:100%}
   @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
   @media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
   .hero-inner{max-width:660px;text-align:left;border-left:3px solid var(--dte-yellow);padding-left:28px}
@@ -168,20 +171,30 @@
   .fcard .fc-sub{font-size:13px;color:#a8a8a8}
   .fcard .fc-arrow{margin-top:auto;color:var(--dte-yellow);font-weight:700;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em}
 
-  /* ---------- MACHINE TYPE GRID ---------- */
-  .machines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-  .mcard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
-    transition:.2s;display:flex;flex-direction:column}
-  .mcard:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
-  .mcard .mc-img{height:180px;background:#eee center/cover no-repeat;position:relative}
-  .mcard .mc-tag{align-self:flex-start;background:var(--dte-yellow);color:var(--dte-ink);
-    font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:3px}
-  .mcard .mc-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .mcard h3{font-size:19px}
-  .mcard p{font-size:14px;color:var(--dte-grey);flex:1}
-  .mcard .mc-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;
-    color:var(--dte-ink);letter-spacing:.04em;display:inline-flex;align-items:center;gap:6px}
-  .mcard .mc-link:hover{color:var(--dte-yellow)}
+  /* ---------- PRIORITY MACHINE LINES (feature + list — deliberately not a uniform card grid) ---------- */
+  .priority-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:stretch}
+  .priority-feature{position:relative;border-radius:var(--radius);overflow:hidden;min-height:480px;display:flex;align-items:flex-end;color:#fff;box-shadow:var(--shadow-sm);transition:.2s}
+  .priority-feature:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .priority-feature::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.92) 100%);z-index:1}
+  .pf-bg{position:absolute;inset:0;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#0e0e0e;transition:.4s}
+  .priority-feature:hover .pf-bg{transform:scale(1.04)}
+  .pf-body{position:relative;z-index:2;padding:32px}
+  .pf-tag{display:inline-block;background:var(--dte-yellow);color:var(--dte-ink);
+    font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:5px 12px;border-radius:3px;margin-bottom:16px}
+  .pf-body h3{font-size:30px;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+  .pf-body p{font-size:15px;color:#f0f0f0;max-width:420px;margin-bottom:16px;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+  .pf-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.04em;color:var(--dte-yellow)}
+
+  .priority-list{display:flex;flex-direction:column;gap:16px}
+  .pl-row{display:flex;gap:18px;background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);padding:16px;transition:.18s;flex:1}
+  .pl-row:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow-sm)}
+  .pl-thumb{width:104px;flex:0 0 104px;border-radius:4px;background:#eee center/cover no-repeat}
+  .pl-body{display:flex;flex-direction:column;gap:4px;flex:1;justify-content:center}
+  .pl-tag{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--dte-yellow-hover)}
+  .pl-body h3{font-size:17px}
+  .pl-body p{font-size:13px;color:var(--dte-grey)}
+  .pl-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--dte-ink);margin-top:2px}
+  .pl-row:hover .pl-link{color:var(--dte-yellow-hover)}
 
   /* ---------- APPLICATIONS ---------- */
   .apps{background:var(--dte-bg)}
@@ -204,7 +217,7 @@
   .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
     transition:.2s;background:#fff;box-shadow:var(--shadow-sm)}
   .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow);transform:translateY(-4px)}
-  .brand-pill .bp-img{height:150px;background:#111 center/cover no-repeat}
+  .brand-pill .bp-img{height:150px;background:#fff center/contain no-repeat;background-origin:content-box;background-clip:content-box;padding:30px;border-bottom:1px solid var(--dte-line)}
   .brand-pill .bp-body{padding:22px 24px 26px}
   .brand-pill .bp-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:.01em;display:block;margin-bottom:6px}
   .brand-pill .bp-desc{font-size:13.5px;color:var(--dte-grey);display:block;margin-bottom:14px}
@@ -281,8 +294,10 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:1100px){
-    .machines-grid,.apps-grid,.finder-panel.active,.finder-grid{grid-template-columns:repeat(2,1fr)}
+    .apps-grid,.finder-panel.active,.finder-grid{grid-template-columns:repeat(2,1fr)}
     .testi-grid,.blog-grid{grid-template-columns:1fr 1fr}
+    .priority-layout{grid-template-columns:1fr}
+    .priority-feature{min-height:340px}
     .why-grid,.lead .wrap{grid-template-columns:1fr;gap:30px}
     .hero h1{font-size:46px}
     nav.primary,.nav-cta .btn{display:none}
@@ -292,7 +307,9 @@
   @media(max-width:640px){
     body{padding-bottom:78px}
     .section{padding:54px 0}
-    .machines-grid,.apps-grid,.finder-panel.active,.finder-grid,.testi-grid,.blog-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
+    .apps-grid,.finder-panel.active,.finder-grid,.testi-grid,.blog-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
+    .pl-row{flex-direction:column}
+    .pl-thumb{width:100%;height:140px}
     .hero h1{font-size:38px}
     .hero{min-height:520px}
     .section-head h2,.lead h2,.why h2{font-size:28px}
@@ -364,6 +381,14 @@
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-hedge-cutters/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/2209153-287-1-600x831.jpg')"></span><span class="mi-label">Rotary Hedge Cutters</span></a>
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/barrier-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Barrier-Mower-RI-60-80-300x284.png')"></span><span class="mi-label">Barrier Mowers</span></a>
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/excavator-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2022/10/KRE-70x44.png')"></span><span class="mi-label">Excavator Mulchers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/09/Tiger-33.jpg')"></span><span class="mi-label">Rotary Mowers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70-Tree-Disc-Mulcher_Featured.jpg')"></span><span class="mi-label">Skid Steer Disc Mulchers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/X30-Mini-Ex_Brush-Cutter_Featured-Left.jpg')"></span><span class="mi-label">Excavator Slashers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Multi Carriers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-crusher/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/2209153-287-1-600x831.jpg')"></span><span class="mi-label">Rotary Crushers</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/weed-clearing-brush/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Weed-Cleaning-Brush-BR-70-90.png')"></span><span class="mi-label">Weed Clearing Brushes</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/ditch-cleaner/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Rotary-Ditch-Cleaner-GR-70-300x284.png')"></span><span class="mi-label">Ditch Cleaners</span></a>
+              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/grass-cutterbar/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/S-165.png')"></span><span class="mi-label">Grass Cutterbars</span></a>
               <div class="mega-foot">
                 <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all products →</a>
                 <span class="mf-note">Greentec · Virnig · Niubo</span>
@@ -400,6 +425,8 @@
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/X30-Mini-Ex_Brush-Cutter_Featured-Left.jpg')"></span><span class="mi-label">Excavator</span></a>
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span><span class="mi-label">Skid Steer</span></a>
               <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Telehandler</span></a>
+              <!-- No global loader landing page exists yet; placeholder links to all products until built -->
+              <a class="mega-item" href="https://www.dte-equipment.com.au/products/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2022/09/Reach-Mower.jpg')"></span><span class="mi-label">Loader <span class="mi-tbc">Page TBC</span></span></a>
               <div class="mega-foot">
                 <a class="view-all" href="https://www.dte-equipment.com.au/products/">Filter products by carrier →</a>
                 <span class="mf-note">Tractor · Excavator · Skid steer · Telehandler · Loader</span>
@@ -416,7 +443,7 @@
               <div class="mega-col-head">Our distributor brands</div>
               <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/greentec/"><span class="bm-name">Greentec</span><span class="bm-desc">Boom arms, quadsaws, cutterbars, flail &amp; barrier mowers</span></a>
               <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="bm-name">Virnig</span><span class="bm-desc">Skid steer &amp; excavator slashers, drum &amp; disc mulchers</span></a>
-              <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/"><span class="bm-name">Niubo</span><span class="bm-desc">Tractor, skid steer &amp; excavator forestry mulchers</span></a>
+              <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/"><span class="bm-name">Niubo</span><span class="bm-desc">Tractor, skid steer &amp; excavator forestry mulchers</span></a>
               <div class="mega-foot">
                 <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all products →</a>
                 <span class="mf-note">Exclusive AU &amp; NZ distributor</span>
@@ -447,6 +474,8 @@
   <a href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">Forestry Mulchers</a>
   <a href="https://www.dte-equipment.com.au/product-category/virnig/">Skid Steer Cutters</a>
   <a href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/">Quadsaws</a>
+  <a href="https://www.dte-equipment.com.au/product-category/greentec/rotary-mowers/">Rotary Mowers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/">Multi Carriers</a>
   <h4>Applications</h4>
   <a href="https://www.dte-equipment.com.au/orchards/">Orchards</a>
   <a href="https://www.dte-equipment.com.au/municipality/">Municipality</a>
@@ -455,7 +484,7 @@
   <h4>Brands</h4>
   <a href="https://www.dte-equipment.com.au/product-category/greentec/">Greentec</a>
   <a href="https://www.dte-equipment.com.au/product-category/virnig/">Virnig</a>
-  <a href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">Niubo</a>
+  <a href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/">Niubo</a>
   <h4>More</h4>
   <a href="https://www.dte-equipment.com.au/products/">All Products</a>
   <a href="https://www.dte-equipment.com.au/news/">News</a>
@@ -531,7 +560,7 @@
     <div class="finder-panel" data-panel="brand">
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/"><span class="fc-title">Greentec</span><span class="fc-sub">Boom arms, quadsaws, cutterbars</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="fc-title">Virnig</span><span class="fc-sub">Skid steer &amp; excavator attachments</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/"><span class="fc-title">Niubo</span><span class="fc-sub">Tractor, skid steer &amp; ex. mulchers</span><span class="fc-arrow">Explore →</span></a>
+      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/"><span class="fc-title">Niubo</span><span class="fc-sub">Tractor, skid steer &amp; ex. mulchers</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/products/"><span class="fc-title">View All Products</span><span class="fc-sub">Full distributor range</span><span class="fc-arrow">Explore →</span></a>
     </div>
   </div>
@@ -542,46 +571,48 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Shop by Machine Type</span>
-      <h2>Priority Machine Lines</h2>
+      <h2>Our Most In-Demand Machines</h2>
       <p>The machines buyers search for most, each with its own commercial hub, specs and carrier match.</p>
     </div>
-    <div class="machines-grid">
-      <a class="mcard" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">
-        <div class="mc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FR-92-Featured-image.png')"></div>
-        <div class="mc-body">
-          <span class="mc-tag">Most Searched</span>
+    <div class="priority-layout">
+      <a class="priority-feature" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">
+        <div class="pf-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FR-92-Featured-image.png')"></div>
+        <div class="pf-body">
+          <span class="pf-tag">Most Searched</span>
           <h3>Flail Mowers</h3>
           <p>Verge, boom and tractor flail mowers for clean, controlled cutting on roadsides, paddocks and rough terrain.</p>
-          <span class="mc-link">View Flail Mowers →</span>
+          <span class="pf-link">View Flail Mowers →</span>
         </div>
       </a>
-      <a class="mcard" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">
-        <div class="mc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FMR-NIUBO-Diamond-Mulcher-300x187.png')"></div>
-        <div class="mc-body">
-          <span class="mc-tag">High Demand</span>
-          <h3>Forestry Mulchers</h3>
-          <p>Excavator, skid steer and tractor mulchers built to clear scrub, saplings and standing timber with proven productivity gains.</p>
-          <span class="mc-link">View Forestry Mulchers →</span>
-        </div>
-      </a>
-      <a class="mcard" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">
-        <div class="mc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
-        <div class="mc-body">
-          <span class="mc-tag">Award-Winning</span>
-          <h3>Reach Mowers</h3>
-          <p>The Greentec Scorpion boom-arm range, silver-medal innovation at AgriTechnica 2019, for verges, banks and hard-to-reach edges.</p>
-          <span class="mc-link">View Reach Mowers →</span>
-        </div>
-      </a>
-      <a class="mcard" href="https://www.dte-equipment.com.au/product-category/virnig/">
-        <div class="mc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></div>
-        <div class="mc-body">
-          <span class="mc-tag">Skid Steer</span>
-          <h3>Skid Steer Cutters</h3>
-          <p>Virnig slashers, drum mulchers, disc mulchers and brush cutters matched to your skid steer's flow and frame.</p>
-          <span class="mc-link">View Skid Steer Range →</span>
-        </div>
-      </a>
+      <div class="priority-list">
+        <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">
+          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FMR-NIUBO-Diamond-Mulcher-300x187.png')"></div>
+          <div class="pl-body">
+            <span class="pl-tag">High Demand</span>
+            <h3>Forestry Mulchers</h3>
+            <p>Excavator, skid steer and tractor mulchers built to clear scrub, saplings and standing timber.</p>
+            <span class="pl-link">View Forestry Mulchers →</span>
+          </div>
+        </a>
+        <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">
+          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
+          <div class="pl-body">
+            <span class="pl-tag">Award-Winning</span>
+            <h3>Reach Mowers</h3>
+            <p>Greentec's Scorpion boom-arm range, silver-medal innovation at AgriTechnica 2019, for verges and hard-to-reach edges.</p>
+            <span class="pl-link">View Reach Mowers →</span>
+          </div>
+        </a>
+        <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/virnig/">
+          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></div>
+          <div class="pl-body">
+            <span class="pl-tag">Skid Steer</span>
+            <h3>Skid Steer Cutters</h3>
+            <p>Virnig slashers, drum and disc mulchers matched to your skid steer's flow and frame.</p>
+            <span class="pl-link">View Skid Steer Range →</span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -590,9 +621,9 @@
 <section class="section apps" id="applications">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Shop by Application</span>
-      <h2>Built For The Way You Work</h2>
-      <p>Whatever you're managing, we'll match you to equipment that's tried, tested and proven for Australian conditions.</p>
+      <span class="eyebrow">Matched To The Job</span>
+      <h2>Smarter Ways To Work, By Application</h2>
+      <p>From orchard rows to roadside verges, we'll match you to machinery proven in the paddock, on the block and on the job site across Australia and New Zealand.</p>
     </div>
     <div class="apps-grid">
       <a class="acard" href="https://www.dte-equipment.com.au/orchards/">
@@ -625,7 +656,7 @@
     </div>
     <div class="brand-row">
       <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/greentec/">
-        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
+        <div class="bp-img" style="background-image:url('images/greentec-logo.png')"></div>
         <div class="bp-body">
           <span class="bp-name">Greentec</span>
           <span class="bp-desc">Boom arms · Quadsaws · Cutterbars</span>
@@ -633,15 +664,15 @@
         </div>
       </a>
       <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/virnig/">
-        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></div>
+        <div class="bp-img" style="background-image:url('images/virnig-logo.jpeg')"></div>
         <div class="bp-body">
           <span class="bp-name">Virnig</span>
           <span class="bp-desc">Skid steer &amp; excavator attachments</span>
           <span class="bp-link">View Range →</span>
         </div>
       </a>
-      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/tractor-mulchers/">
-        <div class="bp-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FMR-NIUBO-Diamond-Mulcher-300x187.png')"></div>
+      <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/niubo-mulchers/">
+        <div class="bp-img" style="background-image:url('images/niubo-logo.jpeg')"></div>
         <div class="bp-body">
           <span class="bp-name">Niubo</span>
           <span class="bp-desc">Tractor · Skid steer · Excavator mulchers</span>
@@ -792,6 +823,7 @@
         <ul>
           <li><a href="https://www.dte-equipment.com.au/about/">About</a></li>
           <li><a href="https://www.dte-equipment.com.au/news/">News &amp; Guides</a></li>
+          <li><a href="https://www.dte-equipment.com.au/videos/">Videos</a></li>
           <li><a href="https://www.dte-equipment.com.au/downloads/">Downloads</a></li>
           <li><a href="https://www.dte-equipment.com.au/contact/">Contact</a></li>
           <li><a href="https://www.dte-equipment.com.au/warranty-registration/">Warranty Registration</a></li>

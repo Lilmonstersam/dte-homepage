@@ -94,3 +94,21 @@ Round of edits applied against client feedback on the first draft:
 - **Quote/lead section**: background changed from a solid yellow block to a dark gradient (yellow now used only for the phone number, the accent left-rule and the primary button); added generous section and quote-box padding.
 - **Latest From DTE**: "Read More" links now carry a permanent yellow underline so they read as links at rest, not just on hover.
 - **Sitewide**: fixed the root cause of the cramped eyebrow/heading spacing — `.eyebrow` was an inline `<span>` so its margin was being ignored by the browser; it's now block-level with its own margin, which fixes the spacing everywhere the class is used.
+
+## Revision — July 2026 differentiation pass
+
+Applied after the client flagged that this mock-up read too closely to the Vortec Global mock-up (same agency, same page template):
+
+- **Hero alignment**: fixed a flexbox bug where `.hero .wrap` had no explicit width — as a flex item it was shrinking to fit its content and then getting auto-margin-centred by the flex container, so the whole hero block sat centred on the page even though the copy inside was `text-align:left`. Added `width:100%` to `.hero .wrap`; content now anchors to the standard left-aligned page grid used everywhere else, matching the fix applied to the Vortec mock-up.
+- **Priority Machine Lines → "Our Most In-Demand Machines"**: renamed the section heading (the internal-sounding "Priority" language read oddly to a buyer) and rebuilt the layout from a uniform 4-card grid (identical in structure to Vortec's product category grid) into a feature-plus-list layout — one large flagship panel (Flail Mowers, the highest-search-volume term per the strategy) alongside a compact stacked list for the other three lines.
+- **Built For The Way You Work → "Smarter Ways To Work, By Application"**: the eyebrow, heading and paragraph were near-identical to Vortec's Applications section. Rewrote to tie into DTE's own established tagline ("Smarter Ways To Work", used in the Why DTE section) instead of generic buyer-pathway phrasing.
+- **Market-Leading Partners imagery**: replaced the product-photo backgrounds on the Greentec/Virnig/Niubo pills with the actual brand logos (supplied by the client, now stored in `images/`), shown on a white contained tile rather than a full-bleed photo so they read as brand marks, not product shots.
+
+## Content-gap revisions (July 2026, live-site link audit)
+
+Cross-checked every mock-up link against the live sitemaps (page, post, product_cat). Revisions made:
+
+- **Machine Types mega-menu completed**: added the 8 live categories that were missing — Rotary Mowers (new Tiger series), Skid Steer Disc Mulchers, Excavator Slashers, Multi Carriers, Rotary Crushers, Weed Clearing Brushes, Ditch Cleaners and Grass Cutterbars — with live thumbnails. Rotary Mowers and Multi Carriers also added to the mobile drawer.
+- **Niubo brand links corrected**: the brand mega-card, brand pill, finder card and drawer previously pointed at the tractor-mulchers subcategory; all now link to the existing `/product-category/niubo-mulchers/` parent.
+- **Loader carrier placeholder**: no global loader landing page exists, so the Carriers mega-menu now shows Loader with a dashed "Page TBC" badge linking to `/products/` until the page is built (same convention as the Vortec mock-up).
+- **Videos added to the footer** Company column — the live page exists in the nav but was dropped from the mock-up entirely.

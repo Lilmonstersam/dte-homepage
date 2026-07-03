@@ -18,6 +18,8 @@ All images in the mock-up are **hotlinked from the live DTE WordPress media libr
 
 All paths are relative to `https://www.dte-equipment.com.au/wp-content/uploads/`.
 
+**Exception — Partners logos**: the Greentec, Virnig and Niubo logos in the Market-Leading Partners section are locally hosted (client-supplied) at `images/greentec-logo.png`, `images/virnig-logo.jpeg` and `images/niubo-logo.jpeg`, not hotlinked, since no logo assets exist in the live WordPress media library.
+
 ## Production recommendations
 
 1. **Compress and resize** every image to its actual display size; serve WebP with JPG fallback.
