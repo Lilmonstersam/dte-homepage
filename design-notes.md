@@ -104,6 +104,18 @@ Applied after the client flagged that this mock-up read too closely to the Vorte
 - **Built For The Way You Work → "Smarter Ways To Work, By Application"**: the eyebrow, heading and paragraph were near-identical to Vortec's Applications section. Rewrote to tie into DTE's own established tagline ("Smarter Ways To Work", used in the Why DTE section) instead of generic buyer-pathway phrasing.
 - **Market-Leading Partners imagery**: replaced the product-photo backgrounds on the Greentec/Virnig/Niubo pills with the actual brand logos (supplied by the client, now stored in `images/`), shown on a white contained tile rather than a full-bleed photo so they read as brand marks, not product shots.
 
+## Revision — July 2026 advisory-positioning pass
+
+Applied against client feedback: reduce clutter, simplify for mobile, and reposition DTE as a trusted advisory partner rather than an equipment supplier. The six messaging pillars from the feedback (application expertise; right solution not just right machine; productivity and commercial outcomes; reduced risk and downtime; long-term support and partnership; investment confidence) are now carried explicitly on the page.
+
+- **Hero**: H1 changed to "The right solution, not just the right machine" (pillar 2, stated up front). Eyebrow now "Vegetation Management Specialists"; lede rewritten around telling us the job and being backed with setup, parts and after-sales support. Trust chips reworked to experience / after-sales support / exclusive distributor.
+- **Why DTE**: heading now "A Partner In The Work, Not Just The Purchase". The four stat cards were removed (the numbers were already carried elsewhere on the page) and replaced with a plain six-point tick list mapping one-to-one to the six feedback pillars. Plain text list rather than icon cards, deliberately, to avoid template-y card clutter.
+- **Testimonials + blog merged into one "Customer Success Stories" section**: the two sections were 80% redundant (two of three blog cards were the same case studies). Now a single section of three real case-study cards, each with an outcome tag, a pull quote and a link to the live story: Howard Meltzer / Yellingbo Olive Grove (2,000 trees pruned in ~10 days), Alf Pappalardo "Gold Nugget" mango pruning, and Jack Evans at Pinecliff Freedman Racing. The telehandler buyer guide and News hub are kept as a one-line footer link under the grid. Net effect: one fewer full section, stronger proof.
+- **Lead band**: copy reframed around straight advice on solution, carrier match and return "before you spend a dollar"; Mick Andrew's after-sales quote (delivery, setup, follow-up call) added under the phone number as proof at the point of conversion.
+- **Section intros** (machines, applications, brands, finder) each rewritten with one advisory line; the finder now carries a "Not sure where to start? Call…" prompt.
+- **Mobile simplification**: finder cards stay two-across with subtitles hidden (halves scroll length instead of stacking 16 cards one-up); application cards and hero shortened; distributor line dropped from the top bar; brand logo tiles and quote box padding reduced; tighter section-head spacing.
+- **Meta**: title and description updated to carry the advice/solution positioning alongside the machine keywords.
+
 ## Content-gap revisions (July 2026, live-site link audit)
 
 Cross-checked every mock-up link against the live sitemaps (page, post, product_cat). Revisions made:

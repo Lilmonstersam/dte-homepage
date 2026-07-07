@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vegetation Management Equipment | Flail Mowers, Forestry Mulchers & Reach Mowers | DTE Equipment</title>
-<meta name="description" content="DTE Equipment supplies world-class vegetation management machinery across Australia: flail mowers, forestry mulchers, reach mowers and skid steer mulchers from Greentec, Virnig and Niubo. Talk to a specialist today.">
+<title>Vegetation Management Equipment & Expert Advice | Flail Mowers, Forestry Mulchers & Reach Mowers | DTE Equipment</title>
+<meta name="description" content="DTE Equipment helps you choose the right vegetation management solution, not just the right machine. Flail mowers, forestry mulchers, reach mowers and skid steer cutters from Greentec, Virnig and Niubo, matched to your job and backed by after-sales support across Australia and New Zealand.">
 <link rel="canonical" href="https://www.dte-equipment.com.au/">
 <meta property="og:locale" content="en_AU">
 <meta property="og:title" content="Vegetation Management Equipment | DTE Equipment">
@@ -155,6 +155,7 @@
   .finder-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
   .finder-head h2{font-size:26px;color:#fff;margin-bottom:8px}
   .finder-head p{color:#bdbdbd;font-size:15px}
+  .finder-head p a{color:var(--dte-yellow);font-weight:700}
   .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
   .tab{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.04em;
     font-size:14px;padding:11px 20px;border-radius:var(--radius);cursor:pointer;
@@ -230,20 +231,28 @@
   .why h2{font-size:36px;margin-bottom:22px}
   .why p{color:#cfcfcf;font-size:16px;margin-bottom:18px}
   .why .why-quote{border-left:3px solid var(--dte-yellow);padding-left:18px;font-style:italic;color:#fff;font-size:18px;margin:28px 0}
-  .stats-inline{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 34px}
-  .stat{background:#262626;border:1px solid #383838;border-radius:var(--radius);padding:22px 20px;text-align:center}
-  .stat .s-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:36px;color:var(--dte-yellow);line-height:1}
-  .stat .s-label{font-size:13.5px;color:#c4c4c4;margin-top:8px}
+  .why-list{list-style:none;margin:26px 0 34px;display:grid;gap:13px}
+  .why-list li{padding-left:30px;position:relative;color:#e2e2e2;font-size:15.5px;line-height:1.5}
+  .why-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--dte-yellow);font-weight:800}
+  .why-list li b{color:#fff}
   .why-image{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);align-self:stretch;min-height:380px}
   .why-image img{width:100%;height:100%;object-fit:cover;display:block}
 
-  /* ---------- TESTIMONIALS ---------- */
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .tcard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
-  .tcard .stars{color:var(--dte-yellow);font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
-  .tcard p{font-size:15px;color:#444;flex:1}
-  .tcard .t-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:15px}
-  .tcard .t-role{font-size:13px;color:var(--dte-grey)}
+  /* ---------- CUSTOMER SUCCESS STORIES (testimonials + case studies merged) ---------- */
+  .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .scard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+  .scard:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .scard .s-img{height:185px;background:#eee center/cover no-repeat}
+  .scard .s-body{padding:22px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .scard .s-result{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--dte-yellow-hover)}
+  .scard h3{font-size:17px;line-height:1.3}
+  .scard blockquote{font-size:14.5px;color:#444;font-style:italic;border-left:3px solid var(--dte-yellow);padding-left:12px;flex:1}
+  .scard .s-name{font-size:13px;color:var(--dte-grey)}
+  .scard .s-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.04em;color:var(--dte-ink);display:inline-flex;align-items:center;gap:6px;width:fit-content;padding-bottom:3px;border-bottom:2px solid var(--dte-yellow)}
+  .scard .s-link:hover{color:var(--dte-yellow-hover);border-color:var(--dte-yellow-hover)}
+  .stories-foot{text-align:center;margin-top:36px;font-size:15px;color:var(--dte-grey)}
+  .stories-foot a{font-weight:700;color:var(--dte-ink);border-bottom:2px solid var(--dte-yellow);padding-bottom:2px}
+  .stories-foot a:hover{color:var(--dte-yellow-hover)}
 
   /* ---------- LEAD / CTA BAND ---------- */
   .lead{background:linear-gradient(135deg,#151515 0%,#262626 100%);color:#fff;padding:100px 0}
@@ -253,6 +262,7 @@
   .lead p{font-size:17px;max-width:480px;margin-bottom:24px;color:#d6d6d6}
   .lead-ctas{display:flex;gap:14px;flex-wrap:wrap}
   .lead .phone-big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:30px;display:inline-flex;align-items:center;gap:10px;color:var(--dte-yellow)}
+  .lead .lead-proof{font-size:14.5px;color:#bdbdbd;font-style:italic;max-width:460px;margin:22px 0 0;border-left:3px solid var(--dte-yellow);padding-left:14px}
   .quote-box{background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}
   .quote-box h3{font-size:22px;margin-bottom:10px}
   .quote-box .qb-sub{font-size:14px;color:var(--dte-grey);margin-bottom:26px;font-family:'Plus Jakarta Sans';text-transform:none;font-weight:400}
@@ -260,19 +270,6 @@
   .quote-box label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}
   .quote-box input,.quote-box select{width:100%;padding:12px 14px;border:1px solid var(--dte-line);border-radius:var(--radius);font-size:15px;font-family:inherit}
   .quote-box .qb-note{font-size:12px;color:var(--dte-grey);margin-top:14px;text-align:center}
-
-  /* ---------- BLOG ---------- */
-  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .bcard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
-  .bcard:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-  .bcard .b-img{height:170px;background:#eee center/cover no-repeat}
-  .bcard .b-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
-  .bcard h3{font-size:17px;line-height:1.25}
-  .bcard p{font-size:14px;color:var(--dte-grey);flex:1}
-  .bcard .b-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.04em;
-    color:var(--dte-ink);display:inline-flex;align-items:center;gap:6px;width:fit-content;
-    padding-bottom:3px;border-bottom:2px solid var(--dte-yellow)}
-  .bcard .b-link:hover{color:var(--dte-yellow-hover);border-color:var(--dte-yellow-hover)}
 
   /* ---------- FOOTER ---------- */
   footer{background:#111;color:#bdbdbd;padding:64px 0 28px}
@@ -295,7 +292,7 @@
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:1100px){
     .apps-grid,.finder-panel.active,.finder-grid{grid-template-columns:repeat(2,1fr)}
-    .testi-grid,.blog-grid{grid-template-columns:1fr 1fr}
+    .story-grid{grid-template-columns:1fr 1fr}
     .priority-layout{grid-template-columns:1fr}
     .priority-feature{min-height:340px}
     .why-grid,.lead .wrap{grid-template-columns:1fr;gap:30px}
@@ -307,16 +304,28 @@
   @media(max-width:640px){
     body{padding-bottom:78px}
     .section{padding:54px 0}
-    .finder .wrap{padding:32px 24px}
-    .apps-grid,.finder-panel.active,.finder-grid,.testi-grid,.blog-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
+    .section-head{margin-bottom:38px}
+    .finder .wrap{padding:32px 20px}
+    .apps-grid,.story-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
+    /* finder stays two-up on mobile with simpler cards — halves scroll length */
+    .finder-panel.active,.finder-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .fcard{min-height:0;padding:14px;gap:8px}
+    .fcard .fc-sub{display:none}
+    .acard{min-height:200px}
+    .brand-pill .bp-img{height:110px;padding:18px}
     .pl-row{flex-direction:column}
     .pl-thumb{width:100%;height:140px}
-    .hero h1{font-size:38px}
-    .hero{min-height:520px}
-    .section-head h2,.lead h2,.why h2{font-size:28px}
+    .priority-feature{min-height:300px}
+    .hero h1{font-size:36px}
+    .hero p.lede{font-size:16.5px}
+    .hero{min-height:480px;padding:56px 0}
+    .hero-inner{padding-left:20px}
+    .section-head h2,.lead h2,.why h2{font-size:27px}
+    .section-head p{font-size:15.5px}
     .topbar .tb-left{gap:14px;font-size:12px}
-    .stats-inline{grid-template-columns:1fr 1fr}
+    .topbar .tb-left span{display:none} /* drop distributor line on small screens */
     .why-image{min-height:220px}
+    .quote-box{padding:28px 22px}
     .mobile-cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--dte-line);box-shadow:0 -6px 24px rgba(0,0,0,.16);opacity:0;pointer-events:none;transform:translateY(110%);transition:transform .22s ease,opacity .18s ease}
     .mobile-cta-bar.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
     .mobile-cta-bar .btn{justify-content:center;min-height:48px;padding:12px 14px;font-size:13px;white-space:nowrap}
@@ -339,7 +348,7 @@
 </head>
 <body>
 
-<div class="mockbanner">DTE Equipment · Homepage redesign mock-up · prepared by Digilari for client review (June 2026) · not live</div>
+<div class="mockbanner">DTE Equipment · Homepage redesign mock-up · prepared by Digilari for client review (revised July 2026) · not live</div>
 
 <!-- ===== TOP UTILITY BAR ===== -->
 <div class="topbar">
@@ -500,17 +509,17 @@
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow">World-Class Vegetation Management Equipment</span>
-      <h1>The right machine for <span class="hl">every job in the field.</span></h1>
-      <p class="lede">Flail mowers, forestry mulchers, reach mowers and skid steer cutters from market-leading brands, supplied and supported across Australia. Find yours by application, machine type or carrier.</p>
+      <span class="eyebrow">Vegetation Management Specialists</span>
+      <h1>The right solution, <span class="hl">not just the right machine.</span></h1>
+      <p class="lede">Tell us about the job, your land and the carrier you run. We'll match you to proven equipment from Greentec, Virnig and Niubo, then back it with setup, parts and after-sales support for the life of the machine.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#finder">Find Your Machine</a>
         <a class="btn btn-ghost" href="tel:0753158020">Talk to a Specialist</a>
       </div>
       <div class="hero-trust">
-        <span><b>Award-winning</b> reach mowers</span>
         <span><b>50+ years</b> combined experience</span>
-        <span><b>AU &amp; NZ</b> distributor</span>
+        <span><b>Setup, parts</b> &amp; after-sales support</span>
+        <span><b>AU &amp; NZ</b> exclusive distributor</span>
       </div>
     </div>
   </div>
@@ -522,7 +531,7 @@
     <div class="finder-head">
       <div>
         <h2>Find Your Machine</h2>
-        <p>Browse the way you buy: by what you do, what you run it on, or the machine you already know you need.</p>
+        <p>Browse by what you do, the carrier you run, or the machine you already know you need. Not sure where to start? Call <a href="tel:0753158020">07 5315 8020</a> and we'll narrow it down in minutes.</p>
       </div>
     </div>
 
@@ -573,7 +582,7 @@
     <div class="section-head">
       <span class="eyebrow">Shop by Machine Type</span>
       <h2>Our Most In-Demand Machines</h2>
-      <p>The machines buyers search for most, each with its own commercial hub, specs and carrier match.</p>
+      <p>The machines our customers ask about most, each backed by straight advice on specs, carrier match and the jobs they're proven on.</p>
     </div>
     <div class="priority-layout">
       <a class="priority-feature" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">
@@ -624,7 +633,7 @@
     <div class="section-head">
       <span class="eyebrow">Matched To The Job</span>
       <h2>Smarter Ways To Work, By Application</h2>
-      <p>From orchard rows to roadside verges, we'll match you to machinery proven in the paddock, on the block and on the job site across Australia and New Zealand.</p>
+      <p>From orchard rows to roadside verges, we work these jobs with our customers every day. Tell us yours and we'll match you to machinery proven in the paddock, on the block and on the job site.</p>
     </div>
     <div class="apps-grid">
       <a class="acard" href="https://www.dte-equipment.com.au/orchards/">
@@ -653,7 +662,7 @@
     <div class="section-head">
       <span class="eyebrow">Shop by Brand</span>
       <h2>Market-Leading Partners</h2>
-      <p>We partner with the brands that meet our stringent quality standards, as the exclusive Australia &amp; New Zealand distributor.</p>
+      <p>We hand-pick the brands that meet our quality standards and stand behind every machine we sell, as the exclusive Australia &amp; New Zealand distributor.</p>
     </div>
     <div class="brand-row">
       <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/greentec/">
@@ -690,16 +699,17 @@
     <div class="why-grid">
       <div>
         <span class="eyebrow">Why DTE Equipment</span>
-        <h2>Smarter Ways To Work, Since 2017</h2>
-        <p>We're driven by a desire to constantly rethink the day-to-day and find ways to improve our customers' operations. Everything we offer is tried, tested and proven for Australian conditions.</p>
-        <p>We combine passion, integrity and know-how to deliver products and a customer experience that exceed expectations, backed by setup, delivery and after-sales support.</p>
+        <h2>A Partner In The Work, Not Just The Purchase</h2>
+        <p>Choosing a machine is easy. Choosing the right solution for your crop, your country and your carrier is where we earn our keep. With more than 50 years of combined experience in vegetation management, we start every conversation with the job, not the catalogue.</p>
+        <ul class="why-list">
+          <li><b>Application knowledge</b> earned in orchards, forestry, councils and farms across Australia and New Zealand</li>
+          <li><b>The right solution, not just a machine</b>, matched to your job, your carrier and your budget</li>
+          <li><b>Advice grounded in productivity and return</b>, so the investment stacks up commercially</li>
+          <li><b>Less downtime and operational risk</b>, with proven machines and local parts backup</li>
+          <li><b>Setup, training and after-sales support</b> for the life of the machine</li>
+          <li><b>Confidence in your investment</b>, backed by the exclusive AU &amp; NZ distributor</li>
+        </ul>
         <div class="why-quote">"I'd liken it to finding a Gold Nugget." Alf Pappalardo, Marathon Man Go</div>
-        <div class="stats-inline">
-          <div class="stat"><div class="s-num">50+</div><div class="s-label">Years combined experience</div></div>
-          <div class="stat"><div class="s-num">3</div><div class="s-label">World-leading brand partners</div></div>
-          <div class="stat"><div class="s-num">AU&amp;NZ</div><div class="s-label">Distribution &amp; support</div></div>
-          <div class="stat"><div class="s-num">2019</div><div class="s-label">AgriTechnica innovation medal</div></div>
-        </div>
         <a class="btn btn-primary" href="https://www.dte-equipment.com.au/about/">About DTE Equipment</a>
       </div>
       <div class="why-image">
@@ -709,30 +719,47 @@
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section class="section">
+<!-- ===== CUSTOMER SUCCESS STORIES (real case studies — proven project outcomes) ===== -->
+<section class="section" id="stories">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Customer Stories</span>
-      <h2>What Our Customers Say</h2>
+      <span class="eyebrow">Proven In The Field</span>
+      <h2>Customer Success Stories</h2>
+      <p>Real operations, real results. How customers across Australia are working faster, safer and more profitably with equipment matched by DTE.</p>
     </div>
-    <div class="testi-grid">
-      <div class="tcard">
-        <div class="stars">5.0 / 5.0 Rating</div>
-        <p>"Excellent customer service from start to receiving goods. The whole team were very helpful and prompt with their replies. DTE Equipment was the only company in Queensland we were able to source from."</p>
-        <div><div class="t-name">Shane Marmin</div><div class="t-role">Farmer</div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars">5.0 / 5.0 Rating</div>
-        <p>"DTE were great. Delivered to Brisbane, assisted with the setup and got me going. Followed up a couple of weeks later to see how the equipment was going. Great service."</p>
-        <div><div class="t-name">Mick Andrew</div><div class="t-role">Farmer</div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars">5.0 / 5.0 Rating</div>
-        <p>"Mt Binga Orchards has over the years acquired Hydraladas and Tow and Blow fans from DTE Equipment. The customer service from DTE has been outstanding throughout."</p>
-        <div><div class="t-name">Barry Trousdell</div><div class="t-role">Mt Binga Orchards</div></div>
-      </div>
+    <div class="story-grid">
+      <a class="scard" href="https://www.dte-equipment.com.au/saves-time-money-and-physical-strain-howard-meltzer-mechanizes-orchard-hedging/">
+        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/Saves-time-money-and-sore-backs-7-e1771363971773.png')"></div>
+        <div class="s-body">
+          <span class="s-result">Pruning 2,000 trees in ~10 days</span>
+          <h3>Mechanised Hedging at Yellingbo Olive Grove</h3>
+          <blockquote>Moving from hand pruning to a Quadsaw system saves time, money and physical strain, and Howard wishes he'd done it earlier.</blockquote>
+          <div class="s-name">Howard Meltzer, Yellingbo Olive Grove, VIC</div>
+          <span class="s-link">Read the Story →</span>
+        </div>
+      </a>
+      <a class="scard" href="https://www.dte-equipment.com.au/mango-pruning-a-gold-nugget/">
+        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/20230215-Greentec-Quadsaw-Marathon-Man-Go-001-Resized-scaled.jpg')"></div>
+        <div class="s-body">
+          <span class="s-result">Faster, cleaner mango pruning</span>
+          <h3>Mango Pruning in the Burdekin</h3>
+          <blockquote>"I'd liken it to finding a Gold Nugget."</blockquote>
+          <div class="s-name">Alf Pappalardo, Marathon Man Go, North QLD</div>
+          <span class="s-link">Read the Story →</span>
+        </div>
+      </a>
+      <a class="scard" href="https://www.dte-equipment.com.au/jack-evans-hedging-at-pinecliff-freedman-racing/">
+        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/04/jack-evans-thumbnail1-e1777331274584.jpg')"></div>
+        <div class="s-body">
+          <span class="s-result">Productivity lift on the Mornington Peninsula</span>
+          <h3>Hedging at Pinecliff, Freedman Racing</h3>
+          <blockquote>How Jack Evans improved productivity at the Pinecliffe training facility with the Greentec Quadsaw.</blockquote>
+          <div class="s-name">Jack Evans, Pinecliff Freedman Racing, VIC</div>
+          <span class="s-link">Read the Story →</span>
+        </div>
+      </a>
     </div>
+    <div class="stories-foot">More stories and buyer guides in <a href="https://www.dte-equipment.com.au/news/">News &amp; Guides</a>, including <a href="https://www.dte-equipment.com.au/what-size-telehandler-do-i-need-for-a-greentec-quadsaw-multi-carrier/">what size telehandler you need for a Quadsaw &amp; Multi Carrier</a>.</div>
   </div>
 </section>
 
@@ -742,10 +769,11 @@
     <div>
       <span class="eyebrow">Work Smarter</span>
       <h2>Talk to a Specialist Today</h2>
-      <p>Tell us what you're working on and we'll match you to the right machine, with honest advice on fit, ROI and carrier requirements. Phone is fastest.</p>
+      <p>Tell us what you're working on and we'll give you straight advice on the right solution, the carrier match and the return you can expect, before you spend a dollar. Phone is fastest.</p>
       <div class="lead-ctas">
         <a class="phone-big" href="tel:0753158020">07 5315 8020</a>
       </div>
+      <p class="lead-proof">"Delivered to Brisbane, assisted with the setup and got me going. Followed up a couple of weeks later to see how the equipment was going." Mick Andrew, Farmer</p>
       <div class="lead-ctas" style="margin-top:20px">
         <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/downloads/">Download Brochure</a>
         <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/contact/">Book a Discovery Call</a>
@@ -762,31 +790,6 @@
       </div>
       <a class="btn btn-primary" href="https://www.dte-equipment.com.au/contact/" style="width:100%;justify-content:center">Request My Quote</a>
       <div class="qb-note">Prefer to talk? Call 07 5315 8020</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BLOG ===== -->
-<section class="section apps" id="blog">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Resources &amp; Buyer Guides</span>
-      <h2>Latest From DTE</h2>
-      <p>Real jobs, machine guides and the answers to the questions buyers ask before they invest.</p>
-    </div>
-    <div class="blog-grid">
-      <a class="bcard" href="https://www.dte-equipment.com.au/jack-evans-hedging-at-pinecliff-freedman-racing/">
-        <div class="b-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/04/jack-evans-thumbnail1-e1777331274584.jpg')"></div>
-        <div class="b-body"><h3>Jack Evans | Hedging at Pinecliff Freedman Racing</h3><p>How Pinecliffe improved productivity with the Greentec Quadsaw.</p><span class="b-link">Read More →</span></div>
-      </a>
-      <a class="bcard" href="https://www.dte-equipment.com.au/what-size-telehandler-do-i-need-for-a-greentec-quadsaw-multi-carrier/">
-        <div class="b-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/01/compressed_image_under_1mb.jpg')"></div>
-        <div class="b-body"><h3>What Size Telehandler For Your Quadsaw &amp; Multi Carrier?</h3><p>Your guide to matching the right telehandler to the job.</p><span class="b-link">Read More →</span></div>
-      </a>
-      <a class="bcard" href="https://www.dte-equipment.com.au/mango-pruning-a-gold-nugget/">
-        <div class="b-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/20230215-Greentec-Quadsaw-Marathon-Man-Go-001-Resized-scaled.jpg')"></div>
-        <div class="b-body"><h3>Mango Pruning | "A Gold Nugget"</h3><p>Alf Pappalardo's results in the Burdekin region of North Queensland.</p><span class="b-link">Read More →</span></div>
-      </a>
     </div>
   </div>
 </section>
