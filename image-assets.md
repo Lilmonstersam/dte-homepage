@@ -7,7 +7,7 @@ All images in the mock-up are **hotlinked from the live DTE WordPress media libr
 | Hero | Background | `2023/09/20230215-Greentec-Quadsaw-Marathon-Man-Go-010-Resized-scaled.jpg` |
 | Header / Footer | Logo (black), Logo (white) | `2022/08/DTE-logo.-black-_-yellow-png-cropped-v2.png` · `2018/12/DTE-logo_-white-_-yellow.-png-v2.png` |
 | Machines | Flail mower | `2023/06/FR-92-Featured-image.png` |
-| Machines | Forestry mulcher | `2023/06/FMR-NIUBO-Diamond-Mulcher-300x187.png` |
+| Machines | Forestry mulcher (Virnig drum) | `2025/07/V70_Drum-Mulcher_Featured_800px.jpg` |
 | Machines | Reach mower | `2023/09/Scorpion-630-FR-1903x840-1.webp` |
 | Machines | Skid steer cutter | `2025/07/V70_Drum-Mulcher_Featured_800px.jpg` |
 | Applications | Orchards | `2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-032-Resized.jpg` |
@@ -18,7 +18,7 @@ All images in the mock-up are **hotlinked from the live DTE WordPress media libr
 
 All paths are relative to `https://www.dte-equipment.com.au/wp-content/uploads/`.
 
-**Exception — Partners logos**: the Greentec, Virnig and Niubo logos in the Market-Leading Partners section are locally hosted (client-supplied) at `images/greentec-logo.png`, `images/virnig-logo.jpeg` and `images/niubo-logo.jpeg`, not hotlinked, since no logo assets exist in the live WordPress media library.
+**Exception — Partners logos**: the Greentec and Virnig logos in the Market-Leading Partners section are locally hosted (client-supplied) at `images/greentec-logo.png` and `images/virnig-logo.jpeg`, not hotlinked, since no logo assets exist in the live WordPress media library. (The Niubo logo was removed in the July 2026 revision — Niubo is no longer part of DTE's range.)
 
 ## Production recommendations
 

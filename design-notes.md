@@ -104,6 +104,12 @@ Applied after the client flagged that this mock-up read too closely to the Vorte
 - **Built For The Way You Work → "Smarter Ways To Work, By Application"**: the eyebrow, heading and paragraph were near-identical to Vortec's Applications section. Rewrote to tie into DTE's own established tagline ("Smarter Ways To Work", used in the Why DTE section) instead of generic buyer-pathway phrasing.
 - **Market-Leading Partners imagery**: replaced the product-photo backgrounds on the Greentec/Virnig/Niubo pills with the actual brand logos (supplied by the client, now stored in `images/`), shown on a white contained tile rather than a full-bleed photo so they read as brand marks, not product shots.
 
+## Revision — July 2026 brand-range correction
+
+- **Niubo removed entirely** (no longer part of DTE's range, per client): brand mega-card, brand pill, finder brand card, drawer link, mega-menu Forestry/Excavator Mulcher items, footer link, hero lede and meta description. Brand sections now show Greentec and Virnig two-up (`.brand-row` and `.mega.simple` re-gridded to 2 columns). The `images/niubo-logo.jpeg` asset is orphaned and can be deleted. Site-side retirement work (301s, nav) added to `implementation-todo.md` item 2.
+- **"Forestry Mulchers" pathway retargeted** from the Niubo tractor-mulchers category to `/product-category/virnig/skid-steer-drum-mulchers/` (Virnig V70 thumbnail), keeping the high-volume "forestry mulcher" keyword on the page. Excavator carrier card copy corrected to slashers/brush cutters (excavator mulchers were Niubo).
+- **Flail mowers qualified as Greentec-only**: DTE supplies flail mowers exclusively from Greentec, so the flagship panel is now "Greentec Flail Mowers" with copy stating the range comes exclusively from Greentec; mega-menu, drawer, footer links and title/meta updated to match. Generic uses of "flail mowers" as a job description (e.g. the Agriculture application card) were left as-is, since they describe the work, not a multi-brand range.
+
 ## Revision — July 2026 advisory-positioning pass
 
 Applied against client feedback: reduce clutter, simplify for mobile, and reposition DTE as a trusted advisory partner rather than an equipment supplier. The six messaging pillars from the feedback (application expertise; right solution not just right machine; productivity and commercial outcomes; reduced risk and downtime; long-term support and partnership; investment confidence) are now carried explicitly on the page.
