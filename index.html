@@ -74,12 +74,17 @@
 
   /* ---------- TOP UTILITY BAR ---------- */
   .topbar{background:var(--dte-ink);color:#ddd;font-size:13.5px}
-  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;flex-wrap:wrap}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:46px;flex-wrap:wrap}
   .topbar a{color:#eee;font-weight:500}
-  .topbar .tb-left{display:flex;gap:22px;align-items:center}
+  .topbar .tb-left{display:flex;gap:24px;align-items:center}
   .topbar .tb-left a:hover{color:var(--dte-yellow)}
-  .topbar .tb-right{display:flex;gap:16px;align-items:center}
-  .topbar .tb-right a{display:inline-flex}
+  .topbar .tb-phone{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:#fff !important;letter-spacing:.01em}
+  .topbar .tb-phone:hover{color:var(--dte-yellow) !important}
+  .topbar .tb-dist{color:#9a9a9a;white-space:nowrap}
+  .topbar .tb-right{display:flex;gap:14px;align-items:center}
+  .topbar .tb-right a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}
+  .topbar .tb-right svg{width:17px;height:17px;fill:#cfcfcf;transition:.15s}
+  .topbar .tb-right a:hover svg{fill:var(--dte-yellow)}
 
   /* ---------- HEADER / NAV ---------- */
   header.main{background:#fff;border-bottom:1px solid var(--dte-line);position:sticky;top:0;z-index:60;box-shadow:var(--shadow-sm)}
@@ -118,6 +123,18 @@
   .mega-foot a.view-all{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--dte-ink)}
   .mega-foot a.view-all:hover{color:var(--dte-yellow)}
   .mega-foot .mf-note{font-size:13px;color:var(--dte-grey)}
+  /* ---- simplified PRODUCTS mega: four smart groups ---- */
+  .mega.products .mega-inner{grid-template-columns:repeat(4,1fr);gap:0;padding:0}
+  .mega-group{padding:26px 22px 26px}
+  .mega-group:not(:last-child){border-right:1px solid var(--dte-line)}
+  .mega-group .mg-head{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:800;
+    font-size:13px;letter-spacing:.1em;color:var(--dte-ink);margin-bottom:4px}
+  .mega-group .mg-sub{font-size:12px;color:var(--dte-grey);margin-bottom:14px;text-transform:none;letter-spacing:0;font-weight:500;line-height:1.35}
+  .mg-grid{display:grid;grid-template-columns:1fr;gap:2px}
+  .mega-group .mega-item{padding:7px 8px}
+  .mega-group .mega-item .mi-thumb{width:40px;height:36px;flex:0 0 40px}
+  .mega-group .mega-item .mi-label{font-size:13px}
+  .mega-group .mega-foot{margin-top:14px}
   /* simple (non-grid) mega for Brands */
   .mega.simple .mega-inner{grid-template-columns:repeat(2,1fr)}
   .brand-mega-card{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--dte-line);border-radius:var(--radius);transition:.15s}
@@ -127,22 +144,23 @@
 
   .nav-cta{display:flex;gap:20px;align-items:center}
   .burger{display:none;background:none;border:none;font-size:26px;cursor:pointer}
+  .header-phone{display:none}
 
   /* ---------- HERO ---------- */
   .hero{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden;color:#fff;padding:70px 0}
   .hero-bg{position:absolute;inset:0;z-index:0;
-    background:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/20230215-Greentec-Quadsaw-Marathon-Man-Go-010-Resized-scaled.jpg') center/cover no-repeat;
+    background:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/08/TDM-stump-grind_800x500-1.jpg') center right/cover no-repeat;
     transform:scale(1);animation:heroZoom 20s ease-out forwards}
   .hero-overlay{position:absolute;inset:0;z-index:1;
-    background:linear-gradient(90deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.74) 45%,rgba(8,8,8,.42) 100%)}
+    background:linear-gradient(90deg,rgba(8,8,8,.90) 0%,rgba(8,8,8,.68) 42%,rgba(8,8,8,.28) 100%)}
   .hero .wrap{position:relative;z-index:2;width:100%}
   @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
   @media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
-  .hero-inner{max-width:660px;text-align:left;border-left:3px solid var(--dte-yellow);padding-left:28px}
-  .hero .eyebrow{font-size:16px;font-weight:800;letter-spacing:.16em;color:#FFD673;text-shadow:0 2px 6px rgba(0,0,0,.6)}
-  .hero h1{font-size:60px;line-height:1.05;margin:0 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
-  .hero h1 .hl{color:var(--dte-yellow)}
-  .hero p.lede{font-size:19px;color:#f0f0f0;margin-bottom:32px;max-width:560px;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+  .hero-inner{max-width:680px;text-align:left;border-left:3px solid var(--dte-yellow);padding-left:28px}
+  .hero .eyebrow{font-size:16px;font-weight:800;letter-spacing:.16em;color:#FFD673;text-shadow:0 2px 6px rgba(0,0,0,.6);margin-bottom:18px}
+  .hero h1{font-size:62px;line-height:1.04;margin:0 0 34px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+  .hero h1 .l1{display:block;color:#fff}
+  .hero h1 .l2{display:block;color:var(--dte-yellow)}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
   .hero-trust{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:#e2e2e2}
   .hero-trust span{display:flex;align-items:center;gap:8px;position:relative}
@@ -171,13 +189,17 @@
   .fcard .fc-title{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;font-size:16px;color:#fff}
   .fcard .fc-sub{font-size:13px;color:#a8a8a8}
   .fcard .fc-arrow{margin-top:auto;color:var(--dte-yellow);font-weight:700;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+  /* image-led finder tiles (Attachment Type) */
+  .fcard.hasimg{padding:0;overflow:hidden;min-height:0}
+  .fcard.hasimg .fc-img{height:150px;background:#111 center/cover no-repeat;border-bottom:1px solid #383838}
+  .fcard.hasimg .fc-inner{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
 
   /* ---------- PRIORITY MACHINE LINES (feature + list — deliberately not a uniform card grid) ---------- */
   .priority-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:stretch}
   .priority-feature{position:relative;border-radius:var(--radius);overflow:hidden;min-height:480px;display:flex;align-items:flex-end;color:#fff;box-shadow:var(--shadow-sm);transition:.2s}
   .priority-feature:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
   .priority-feature::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.92) 100%);z-index:1}
-  .pf-bg{position:absolute;inset:0;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#0e0e0e;transition:.4s}
+  .pf-bg{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;background-position:center;background-color:#0e0e0e;transition:.4s}
   .priority-feature:hover .pf-bg{transform:scale(1.04)}
   .pf-body{position:relative;z-index:2;padding:32px}
   .pf-tag{display:inline-block;background:var(--dte-yellow);color:var(--dte-ink);
@@ -218,7 +240,8 @@
   .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
     transition:.2s;background:#fff;box-shadow:var(--shadow-sm)}
   .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow);transform:translateY(-4px)}
-  .brand-pill .bp-img{height:150px;background:#fff center/contain no-repeat;background-origin:content-box;background-clip:content-box;padding:30px;border-bottom:1px solid var(--dte-line)}
+  .brand-pill .bp-img{height:180px;display:flex;align-items:center;justify-content:center;padding:24px 40px;background:#fff;border-bottom:1px solid var(--dte-line)}
+  .brand-pill .bp-img img{max-height:66px;width:auto;max-width:78%;object-fit:contain;display:block}
   .brand-pill .bp-body{padding:22px 24px 26px}
   .brand-pill .bp-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:.01em;display:block;margin-bottom:6px}
   .brand-pill .bp-desc{font-size:13.5px;color:var(--dte-grey);display:block;margin-bottom:14px}
@@ -238,11 +261,20 @@
   .why-image{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);align-self:stretch;min-height:380px}
   .why-image img{width:100%;height:100%;object-fit:cover;display:block}
 
-  /* ---------- CUSTOMER SUCCESS STORIES (testimonials + case studies merged) ---------- */
-  .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .scard{background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+  /* ---------- CUSTOMER SUCCESS STORIES (side-scroll carousel of video reviews / case studies) ---------- */
+  .story-scroller{position:relative}
+  .story-grid{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 16px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .story-grid::-webkit-scrollbar{height:8px}
+  .story-grid::-webkit-scrollbar-track{background:var(--dte-line);border-radius:4px}
+  .story-grid::-webkit-scrollbar-thumb{background:#bcbcbc;border-radius:4px}
+  .story-hint{font-size:13px;color:var(--dte-grey);margin-top:2px;display:flex;align-items:center;gap:6px}
+  .scard{flex:0 0 330px;scroll-snap-align:start;background:#fff;border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
   .scard:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-  .scard .s-img{height:185px;background:#eee center/cover no-repeat}
+  .scard .s-img{position:relative;height:185px;background:#eee center/cover no-repeat}
+  .scard .s-img::after{content:"";position:absolute;left:50%;top:50%;width:52px;height:52px;transform:translate(-50%,-50%);
+    background:rgba(240,160,32,.94) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231a1a1a'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/22px no-repeat;
+    border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:.18s}
+  .scard:hover .s-img::after{transform:translate(-50%,-50%) scale(1.08);background-color:var(--dte-yellow)}
   .scard .s-body{padding:22px;display:flex;flex-direction:column;gap:11px;flex:1}
   .scard .s-result{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--dte-yellow-hover)}
   .scard h3{font-size:17px;line-height:1.3}
@@ -250,9 +282,10 @@
   .scard .s-name{font-size:13px;color:var(--dte-grey)}
   .scard .s-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.04em;color:var(--dte-ink);display:inline-flex;align-items:center;gap:6px;width:fit-content;padding-bottom:3px;border-bottom:2px solid var(--dte-yellow)}
   .scard .s-link:hover{color:var(--dte-yellow-hover);border-color:var(--dte-yellow-hover)}
-  .stories-foot{text-align:center;margin-top:36px;font-size:15px;color:var(--dte-grey)}
-  .stories-foot a{font-weight:700;color:var(--dte-ink);border-bottom:2px solid var(--dte-yellow);padding-bottom:2px}
-  .stories-foot a:hover{color:var(--dte-yellow-hover)}
+  .stories-foot{display:flex;justify-content:flex-end;margin-top:30px}
+  .stories-foot a.news-cta{display:inline-flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.04em;font-size:14px;color:var(--dte-ink);background:var(--dte-bg);border:2px solid var(--dte-ink);border-radius:var(--radius);padding:12px 22px;transition:.16s}
+  .stories-foot a.news-cta:hover{background:var(--dte-ink);color:#fff}
+  .stories-foot a.news-cta .arr{font-size:18px;line-height:1}
 
   /* ---------- LEAD / CTA BAND ---------- */
   .lead{background:linear-gradient(135deg,#151515 0%,#262626 100%);color:#fff;padding:100px 0}
@@ -263,11 +296,12 @@
   .lead-ctas{display:flex;gap:14px;flex-wrap:wrap}
   .lead .phone-big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:30px;display:inline-flex;align-items:center;gap:10px;color:var(--dte-yellow)}
   .lead .lead-proof{font-size:14.5px;color:#bdbdbd;font-style:italic;max-width:460px;margin:22px 0 0;border-left:3px solid var(--dte-yellow);padding-left:14px}
-  .quote-box{background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}
+  .quote-box{background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);color:var(--dte-ink)}
   .quote-box h3{font-size:22px;margin-bottom:10px}
   .quote-box .qb-sub{font-size:14px;color:var(--dte-grey);margin-bottom:26px;font-family:'Plus Jakarta Sans';text-transform:none;font-weight:400}
   .quote-box .field{margin-bottom:18px}
   .quote-box label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}
+  .quote-box label .req{color:var(--dte-yellow-hover)}
   .quote-box input,.quote-box select{width:100%;padding:12px 14px;border:1px solid var(--dte-line);border-radius:var(--radius);font-size:15px;font-family:inherit}
   .quote-box .qb-note{font-size:12px;color:var(--dte-grey);margin-top:14px;text-align:center}
 
@@ -289,6 +323,17 @@
   /* ---------- MOBILE STICKY CTA ---------- */
   .mobile-cta-bar{display:none}
 
+  /* ---------- DESKTOP STICKY CTA (appears after Find Your Machine) ---------- */
+  .desktop-cta-bar{display:none}
+  @media(min-width:1101px){
+    .desktop-cta-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:80;background:#151515;border-top:3px solid var(--dte-yellow);
+      box-shadow:0 -6px 24px rgba(0,0,0,.22);transform:translateY(110%);transition:transform .25s ease;padding:14px 0}
+    .desktop-cta-bar.is-visible{transform:translateY(0)}
+    .desktop-cta-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .desktop-cta-bar .dcb-text{color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:16px}
+    .desktop-cta-bar .dcb-actions{display:flex;gap:12px}
+  }
+
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:1100px){
     .apps-grid,.finder-panel.active,.finder-grid{grid-template-columns:repeat(2,1fr)}
@@ -300,22 +345,45 @@
     nav.primary,.nav-cta .btn{display:none}
     .burger{display:block}
     .foot-grid{grid-template-columns:1fr 1fr}
+    /* phone moves into the sticky header so it's always reachable */
+    .topbar{display:none}
+    .header-phone{display:inline-flex;align-items:center;gap:7px;margin-left:auto;margin-right:14px;
+      font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:var(--dte-ink);white-space:nowrap}
+    .header-phone svg{width:18px;height:18px;fill:var(--dte-yellow);flex:0 0 18px}
   }
   @media(max-width:640px){
     body{padding-bottom:78px}
     .section{padding:54px 0}
     .section-head{margin-bottom:38px}
     .finder .wrap{padding:32px 20px}
-    .apps-grid,.story-grid,.foot-grid,.brand-row{grid-template-columns:1fr}
+    .foot-grid,.brand-row{grid-template-columns:1fr}
     /* finder stays two-up on mobile with simpler cards — halves scroll length */
     .finder-panel.active,.finder-grid{grid-template-columns:1fr 1fr;gap:10px}
     .fcard{min-height:0;padding:14px;gap:8px}
     .fcard .fc-sub{display:none}
-    .acard{min-height:200px}
-    .brand-pill .bp-img{height:110px;padding:18px}
-    .pl-row{flex-direction:column}
-    .pl-thumb{width:100%;height:140px}
+    .fcard.hasimg{padding:0}
+    .fcard.hasimg .fc-img{height:104px}
+    .fcard.hasimg .fc-inner{padding:12px}
+    /* condense Work Smarter apps into a compact 2-up grid */
+    .apps-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .acard{min-height:150px}
+    .acard p{display:none}
+    .acard h3{font-size:18px}
+    .brand-pill .bp-img{height:130px;padding:18px}
+    /* condense In-Demand list rows: keep compact horizontal, drop body copy */
+    .pl-row{flex-direction:row;padding:12px;gap:12px;align-items:center}
+    .pl-thumb{width:84px;flex:0 0 84px;height:64px}
+    .pl-body p{display:none}
     .priority-feature{min-height:300px}
+    /* stories carousel: tighter card width on mobile */
+    .scard{flex:0 0 82vw}
+    /* ---- mobile accordion for heavy sections ---- */
+    .m-accordion .m-acc-toggle{cursor:pointer;position:relative;padding-right:30px;display:inline-flex;align-items:center}
+    .m-accordion .section-head{margin-bottom:20px}
+    .m-accordion .m-acc-toggle::after{content:"▾";position:absolute;right:0;color:var(--dte-yellow);font-size:16px;transition:.2s}
+    .m-accordion.open .m-acc-toggle::after{transform:rotate(180deg)}
+    .m-accordion .m-acc-body{display:none;margin-top:20px}
+    .m-accordion.open .m-acc-body{display:block}
     .hero h1{font-size:36px}
     .hero p.lede{font-size:16.5px}
     .hero{min-height:480px;padding:56px 0}
@@ -342,7 +410,7 @@
   .drawer h4{font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.1em;color:var(--dte-yellow);margin:22px 0 8px}
   .drawer a{display:block;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;font-size:15px;padding:8px 0;color:#eee;border-bottom:1px solid #2e2e2e}
   .drawer a:hover{color:var(--dte-yellow)}
-  .drawer .dr-cta{margin-top:24px}
+  .drawer .dr-cta{margin-top:24px;justify-content:center;text-align:center;width:100%}
   @media(max-width:1100px){.drawer{display:block}}
 </style>
 </head>
@@ -354,14 +422,13 @@
 <div class="topbar">
   <div class="wrap">
     <div class="tb-left">
-      <a href="tel:0753158020">07 5315 8020</a>
-      <a href="https://www.dte-equipment.com.au/contact/">Sales enquiries</a>
-      <span style="color:#888">Australia &amp; New Zealand Distributor</span>
+      <a class="tb-phone" href="tel:0753158020">07 5315 8020</a>
+      <span class="tb-dist">Distributing across Australia and New Zealand</span>
     </div>
     <div class="tb-right">
-      <a href="https://au.linkedin.com/company/dte-equipment" title="LinkedIn">in</a>
-      <a href="https://www.youtube.com/channel/UC-jx3tGIr1XZmE5Qt1RETbg" title="YouTube">▶</a>
-      <a href="https://www.facebook.com/DTEEquipment/" title="Facebook">f</a>
+      <a href="https://au.linkedin.com/company/dte-equipment" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg></a>
+      <a href="https://www.youtube.com/channel/UC-jx3tGIr1XZmE5Qt1RETbg" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+      <a href="https://www.facebook.com/DTEEquipment/" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
     </div>
   </div>
 </div>
@@ -375,85 +442,64 @@
     <nav class="primary">
       <ul>
 
-        <!-- MACHINE TYPES -->
+        <!-- PRODUCTS (single smart menu — browse by Attachment Type or Application) -->
         <li>
-          <a class="has-mega" href="https://www.dte-equipment.com.au/products/">Machine Types</a>
-          <div class="mega">
+          <a class="has-mega" href="https://www.dte-equipment.com.au/products/">Products</a>
+          <div class="mega products">
             <div class="mega-inner">
-              <div class="mega-col-head">Browse by machine type</div>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FR-92-Featured-image.png')"></span><span class="mi-label">Greentec Flail Mowers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Scorpion-4-Featured-image-1-70x66.png')"></span><span class="mi-label">Reach Mowers / Boom Arms</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span><span class="mi-label">Skid Steer Mulchers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V40_Closed-Front-Rotary-Brush-Cutter_Featured.jpg')"></span><span class="mi-label">Skid Steer Slashers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Twinsaw-LRS-2002-2402.png')"></span><span class="mi-label">Quadsaws</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/cutterbars/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/HL-152-Featured-image.png')"></span><span class="mi-label">Cutterbars</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-hedge-cutters/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/2209153-287-1-600x831.jpg')"></span><span class="mi-label">Rotary Hedge Cutters</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/barrier-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Barrier-Mower-RI-60-80-300x284.png')"></span><span class="mi-label">Barrier Mowers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/09/Tiger-33.jpg')"></span><span class="mi-label">Rotary Mowers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70-Tree-Disc-Mulcher_Featured.jpg')"></span><span class="mi-label">Skid Steer Disc Mulchers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/X30-Mini-Ex_Brush-Cutter_Featured-Left.jpg')"></span><span class="mi-label">Excavator Slashers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Multi Carriers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/rotary-crusher/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/2209153-287-1-600x831.jpg')"></span><span class="mi-label">Rotary Crushers</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/weed-clearing-brush/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Weed-Cleaning-Brush-BR-70-90.png')"></span><span class="mi-label">Weed Clearing Brushes</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/ditch-cleaner/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Rotary-Ditch-Cleaner-GR-70-300x284.png')"></span><span class="mi-label">Ditch Cleaners</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/grass-cutterbar/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/S-165.png')"></span><span class="mi-label">Grass Cutterbars</span></a>
-              <div class="mega-foot">
-                <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all products →</a>
-                <span class="mf-note">Greentec · Virnig</span>
+              <div class="mega-group">
+                <div class="mg-head">By Attachment Type</div>
+                <div class="mg-sub">The attachments our partners ask for most</div>
+                <div class="mg-grid">
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Twinsaw-LRS-2002-2402.png')"></span><span class="mi-label">Quadsaws</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/Scorpion-4-Featured-image-1-70x66.png')"></span><span class="mi-label">Reach Mowers</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70-Tree-Disc-Mulcher_Featured.jpg')"></span><span class="mi-label">Disc Mulchers</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span><span class="mi-label">Drum Mulchers</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FR-92-Featured-image.png')"></span><span class="mi-label">Flail Mowers</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/cutterbars/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/HL-152-Featured-image.png')"></span><span class="mi-label">Cutterbars</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Multi Carriers</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V40_Closed-Front-Rotary-Brush-Cutter_Featured.jpg')"></span><span class="mi-label">Skid Steer Slashers</span></a>
+                </div>
+                <div class="mega-foot">
+                  <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all attachments →</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- APPLICATIONS -->
-        <li>
-          <a class="has-mega" href="https://www.dte-equipment.com.au/markets/">Applications</a>
-          <div class="mega">
-            <div class="mega-inner">
-              <div class="mega-col-head">Browse by application</div>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/orchards/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-012-Resized-1024x683.jpg')"></span><span class="mi-label">Orchards</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/municipality/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></span><span class="mi-label">Municipality</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/forestry/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/forestry-image-cover-desktop-2.webp')"></span><span class="mi-label">Forestry</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/agriculture/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/08/1692597721975.jpg')"></span><span class="mi-label">Agriculture</span></a>
-              <div class="mega-foot">
-                <a class="view-all" href="https://www.dte-equipment.com.au/markets/">View all markets →</a>
-                <span class="mf-note">Equipment matched to the job</span>
+              <div class="mega-group">
+                <div class="mg-head">By Application</div>
+                <div class="mg-sub">Matched to the job you run</div>
+                <div class="mg-grid apps">
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/orchards/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-012-Resized-1024x683.jpg')"></span><span class="mi-label">Orchards</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/municipality/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></span><span class="mi-label">Roadside</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/forestry/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/08/TDM-stump-grind_800x500-1.jpg')"></span><span class="mi-label">Land Clearing &amp; Mulching</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/agriculture/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/08/1692597721975.jpg')"></span><span class="mi-label">Leucaena</span></a>
+                </div>
+                <div class="mega-foot">
+                  <a class="view-all" href="https://www.dte-equipment.com.au/markets/">View all applications →</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- CARRIERS -->
-        <li>
-          <a class="has-mega" href="https://www.dte-equipment.com.au/products/">Carriers</a>
-          <div class="mega">
-            <div class="mega-inner">
-              <div class="mega-col-head">Browse by carrier</div>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></span><span class="mi-label">Tractor</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/X30-Mini-Ex_Brush-Cutter_Featured-Left.jpg')"></span><span class="mi-label">Excavator</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span><span class="mi-label">Skid Steer</span></a>
-              <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Telehandler</span></a>
-              <!-- No global loader landing page exists yet; placeholder links to all products until built -->
-              <a class="mega-item" href="https://www.dte-equipment.com.au/products/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2022/09/Reach-Mower.jpg')"></span><span class="mi-label">Loader <span class="mi-tbc">Page TBC</span></span></a>
-              <div class="mega-foot">
-                <a class="view-all" href="https://www.dte-equipment.com.au/products/">Filter products by carrier →</a>
-                <span class="mf-note">Tractor · Excavator · Skid steer · Telehandler · Loader</span>
+              <div class="mega-group">
+                <div class="mg-head">By Vehicle</div>
+                <div class="mg-sub">Attachments for the machine you run</div>
+                <div class="mg-grid">
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></span><span class="mi-label">Tractor</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/X30-Mini-Ex_Brush-Cutter_Featured-Left.jpg')"></span><span class="mi-label">Excavator</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span><span class="mi-label">Skid Steer</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="mi-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg')"></span><span class="mi-label">Telehandler</span></a>
+                </div>
+                <div class="mega-foot">
+                  <a class="view-all" href="https://www.dte-equipment.com.au/products/">Filter by vehicle →</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- BRANDS -->
-        <li>
-          <a class="has-mega" href="https://www.dte-equipment.com.au/products/">Brands</a>
-          <div class="mega simple">
-            <div class="mega-inner">
-              <div class="mega-col-head">Our distributor brands</div>
-              <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/greentec/"><span class="bm-name">Greentec</span><span class="bm-desc">Boom arms, quadsaws, cutterbars, flail &amp; barrier mowers</span></a>
-              <a class="brand-mega-card" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="bm-name">Virnig</span><span class="bm-desc">Skid steer &amp; excavator slashers, drum &amp; disc mulchers</span></a>
-              <div class="mega-foot">
-                <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all products →</a>
-                <span class="mf-note">Exclusive AU &amp; NZ distributor</span>
+              <div class="mega-group">
+                <div class="mg-head">By Brand</div>
+                <div class="mg-sub">Our exclusive distributor brands</div>
+                <div class="mg-grid">
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/greentec/"><span class="mi-thumb" style="background-image:url('images/greentec-logo.png')"></span><span class="mi-label">Greentec</span></a>
+                  <a class="mega-item" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="mi-thumb" style="background-image:url('images/virnig-logo.jpeg')"></span><span class="mi-label">Virnig</span></a>
+                </div>
+                <div class="mega-foot">
+                  <a class="view-all" href="https://www.dte-equipment.com.au/products/">View all products →</a>
+                </div>
               </div>
             </div>
           </div>
@@ -467,6 +513,7 @@
     <div class="nav-cta">
       <a class="btn btn-primary" href="https://www.dte-equipment.com.au/contact/">Get a Quote</a>
     </div>
+    <a class="header-phone" href="tel:0753158020" aria-label="Call 07 5315 8020"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.24 1.02z"/></svg>07 5315 8020</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
@@ -475,24 +522,21 @@
 <div class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside class="drawer" id="drawer" aria-label="Mobile navigation">
   <button class="dr-close" id="drawerClose" aria-label="Close menu">&times;</button>
-  <h4>Machine Types</h4>
-  <a href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">Greentec Flail Mowers</a>
-  <a href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">Reach Mowers / Boom Arms</a>
-  <a href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/">Skid Steer Drum Mulchers</a>
-  <a href="https://www.dte-equipment.com.au/product-category/virnig/">Skid Steer Cutters</a>
+  <h4>Products — By Attachment Type</h4>
   <a href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/">Quadsaws</a>
-  <a href="https://www.dte-equipment.com.au/product-category/greentec/rotary-mowers/">Rotary Mowers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">Reach Mowers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/">Disc Mulchers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/">Drum Mulchers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">Flail Mowers</a>
+  <a href="https://www.dte-equipment.com.au/product-category/greentec/cutterbars/">Cutterbars</a>
   <a href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/">Multi Carriers</a>
-  <h4>Applications</h4>
+  <a href="https://www.dte-equipment.com.au/products/">View All Attachments</a>
+  <h4>Products — By Application</h4>
   <a href="https://www.dte-equipment.com.au/orchards/">Orchards</a>
-  <a href="https://www.dte-equipment.com.au/municipality/">Municipality</a>
-  <a href="https://www.dte-equipment.com.au/forestry/">Forestry</a>
-  <a href="https://www.dte-equipment.com.au/agriculture/">Agriculture</a>
-  <h4>Brands</h4>
-  <a href="https://www.dte-equipment.com.au/product-category/greentec/">Greentec</a>
-  <a href="https://www.dte-equipment.com.au/product-category/virnig/">Virnig</a>
+  <a href="https://www.dte-equipment.com.au/municipality/">Roadside</a>
+  <a href="https://www.dte-equipment.com.au/forestry/">Land Clearing &amp; Mulching</a>
+  <a href="https://www.dte-equipment.com.au/agriculture/">Leucaena</a>
   <h4>More</h4>
-  <a href="https://www.dte-equipment.com.au/products/">All Products</a>
   <a href="https://www.dte-equipment.com.au/news/">News</a>
   <a href="https://www.dte-equipment.com.au/about/">About</a>
   <a href="https://www.dte-equipment.com.au/contact/">Contact</a>
@@ -506,16 +550,15 @@
   <div class="wrap">
     <div class="hero-inner">
       <span class="eyebrow">Vegetation Management Specialists</span>
-      <h1>The right solution, <span class="hl">not just the right machine.</span></h1>
-      <p class="lede">Tell us about the job, your land and the carrier you run. We'll match you to proven equipment from Greentec and Virnig, then back it with setup, parts and after-sales support for the life of the machine.</p>
+      <h1><span class="l1">Heavy-duty attachments,</span><span class="l2">built to work smarter.</span></h1>
+      <!-- Find Your Machine sits directly below, so hero keeps only the Talk to a Specialist CTA. -->
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#finder">Find Your Machine</a>
-        <a class="btn btn-ghost" href="tel:0753158020">Talk to a Specialist</a>
+        <a class="btn btn-primary" href="tel:0753158020">Talk to a Specialist</a>
       </div>
       <div class="hero-trust">
         <span><b>50+ years</b> combined experience</span>
-        <span><b>Setup, parts</b> &amp; after-sales support</span>
-        <span><b>AU &amp; NZ</b> exclusive distributor</span>
+        <span><b>Premium attachments</b>, built for Australian conditions</span>
+        <span><b>A partnership not a product</b>, market-leading aftersales support</span>
       </div>
     </div>
   </div>
@@ -527,42 +570,54 @@
     <div class="finder-head">
       <div>
         <h2>Find Your Machine</h2>
-        <p>Browse by what you do, the carrier you run, or the machine you already know you need. Not sure where to start? Call <a href="tel:0753158020">07 5315 8020</a> and we'll narrow it down in minutes.</p>
+        <p>Not sure where to start? Call <a href="tel:0753158020">07 5315 8020</a> and we'll narrow it down in minutes.</p>
       </div>
     </div>
 
     <div class="tabs">
-      <button class="tab active" data-tab="application">By Application</button>
-      <button class="tab" data-tab="machine">By Machine Type</button>
-      <button class="tab" data-tab="carrier">By Carrier</button>
+      <button class="tab active" data-tab="vehicle">By Vehicle</button>
+      <button class="tab" data-tab="application">By Application</button>
+      <button class="tab" data-tab="machine">By Attachment Type</button>
       <button class="tab" data-tab="brand">By Brand</button>
     </div>
 
-    <!-- BY APPLICATION -->
-    <div class="finder-panel active" data-panel="application">
-      <a class="fcard" href="https://www.dte-equipment.com.au/orchards/"><span class="fc-title">Orchards</span><span class="fc-sub">Quadsaws, hedge cutters, cutterbars</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/forestry/"><span class="fc-title">Forestry</span><span class="fc-sub">Mulchers, disc &amp; drum heads</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/municipality/"><span class="fc-title">Municipality</span><span class="fc-sub">Reach mowers, verge &amp; boom mowers</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/agriculture/"><span class="fc-title">Agriculture</span><span class="fc-sub">Flail mowers, slashers, mulchers</span><span class="fc-arrow">Explore →</span></a>
-    </div>
-
-    <!-- BY MACHINE TYPE (maps to slide 11 build targets) -->
-    <div class="finder-panel" data-panel="machine">
-      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/"><span class="fc-title">Flail Mowers</span><span class="fc-sub">Greentec verge, boom &amp; tractor flail</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/"><span class="fc-title">Forestry Mulchers</span><span class="fc-sub">Virnig drum &amp; disc mulchers</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="fc-title">Reach Mowers</span><span class="fc-sub">Award-winning boom arms</span><span class="fc-arrow">Explore →</span></a>
-      <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="fc-title">Skid Steer Cutters</span><span class="fc-sub">Slashers, brush &amp; drum cutters</span><span class="fc-arrow">Explore →</span></a>
-    </div>
-
-    <!-- BY CARRIER (no dedicated carrier pages yet — link to filtered products / closest category) -->
-    <div class="finder-panel" data-panel="carrier">
+    <!-- BY VEHICLE (reordered first) -->
+    <div class="finder-panel active" data-panel="vehicle">
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/"><span class="fc-title">Tractor</span><span class="fc-sub">Boom arms, flail &amp; rotary heads</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/excavator-slashers/"><span class="fc-title">Excavator</span><span class="fc-sub">Slashers &amp; brush cutters by tonnage</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="fc-title">Skid Steer</span><span class="fc-sub">Mulchers, slashers, brush cutters</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/multi-carriers/"><span class="fc-title">Telehandler</span><span class="fc-sub">Quadsaw &amp; multi-carrier match</span><span class="fc-arrow">Explore →</span></a>
     </div>
 
-    <!-- BY BRAND -->
+    <!-- BY APPLICATION -->
+    <div class="finder-panel" data-panel="application">
+      <a class="fcard" href="https://www.dte-equipment.com.au/orchards/"><span class="fc-title">Orchards</span><span class="fc-sub">Quadsaws, hedge cutters, cutterbars</span><span class="fc-arrow">Explore →</span></a>
+      <a class="fcard" href="https://www.dte-equipment.com.au/municipality/"><span class="fc-title">Roadside</span><span class="fc-sub">Reach mowers, verge &amp; boom mowers</span><span class="fc-arrow">Explore →</span></a>
+      <a class="fcard" href="https://www.dte-equipment.com.au/forestry/"><span class="fc-title">Land Clearing &amp; Mulching</span><span class="fc-sub">Disc &amp; drum mulchers, mulching heads</span><span class="fc-arrow">Explore →</span></a>
+      <a class="fcard" href="https://www.dte-equipment.com.au/agriculture/"><span class="fc-title">Leucaena</span><span class="fc-sub">Flail mowers, slashers, cutterbars</span><span class="fc-arrow">Explore →</span></a>
+    </div>
+
+    <!-- BY ATTACHMENT TYPE — feature Quadsaw, Reach Mower, Disc & Drum Mulchers with clear images -->
+    <div class="finder-panel" data-panel="machine">
+      <a class="fcard hasimg" href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/">
+        <span class="fc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-012-Resized-1024x683.jpg')"></span>
+        <span class="fc-inner"><span class="fc-title">Quadsaws</span><span class="fc-sub">Greentec hedge &amp; canopy saws</span><span class="fc-arrow">Explore →</span></span>
+      </a>
+      <a class="fcard hasimg" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">
+        <span class="fc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></span>
+        <span class="fc-inner"><span class="fc-title">Reach Mowers</span><span class="fc-sub">Award-winning Scorpion boom arms</span><span class="fc-arrow">Explore →</span></span>
+      </a>
+      <a class="fcard hasimg" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/">
+        <span class="fc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70-Tree-Disc-Mulcher_Featured.jpg')"></span>
+        <span class="fc-inner"><span class="fc-title">Disc Mulchers</span><span class="fc-sub">Virnig V70 tree disc mulchers</span><span class="fc-arrow">Explore →</span></span>
+      </a>
+      <a class="fcard hasimg" href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/">
+        <span class="fc-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></span>
+        <span class="fc-inner"><span class="fc-title">Drum Mulchers</span><span class="fc-sub">Virnig V70 skid steer drum mulchers</span><span class="fc-arrow">Explore →</span></span>
+      </a>
+    </div>
+
+    <!-- BY BRAND (approved as is) -->
     <div class="finder-panel" data-panel="brand">
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/greentec/"><span class="fc-title">Greentec</span><span class="fc-sub">Boom arms, quadsaws, cutterbars</span><span class="fc-arrow">Explore →</span></a>
       <a class="fcard" href="https://www.dte-equipment.com.au/product-category/virnig/"><span class="fc-title">Virnig</span><span class="fc-sub">Skid steer &amp; excavator attachments</span><span class="fc-arrow">Explore →</span></a>
@@ -572,20 +627,18 @@
 </section>
 
 <!-- ===== MACHINE TYPE HUBS (slide 11 + 12 — the SEO build targets, surfaced on homepage) ===== -->
-<section class="section" id="machines">
+<section class="section m-accordion" id="machines">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Shop by Machine Type</span>
       <h2>Our Most In-Demand Machines</h2>
-      <p>The machines our customers ask about most, each backed by straight advice on specs, carrier match and the jobs they're proven on.</p>
     </div>
     <div class="priority-layout">
       <a class="priority-feature" href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">
-        <div class="pf-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/FR-92-Featured-image.png')"></div>
+        <div class="pf-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-012-Resized-1024x683.jpg')"></div>
         <div class="pf-body">
           <span class="pf-tag">Most Searched</span>
           <h3>Greentec Flail Mowers</h3>
-          <p>Our flail mower range comes exclusively from Greentec: verge, boom and tractor flail mowers for clean, controlled cutting on roadsides, paddocks and rough terrain.</p>
+          <p>Heavy-duty verge, boom and tractor flail mowers for clean, controlled cutting on roadsides, paddocks and rough terrain.</p>
           <span class="pf-link">View Greentec Flail Mowers →</span>
         </div>
       </a>
@@ -600,7 +653,7 @@
           </div>
         </a>
         <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">
-          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
+          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1-1024x452.webp')"></div>
           <div class="pl-body">
             <span class="pl-tag">Award-Winning</span>
             <h3>Reach Mowers</h3>
@@ -608,13 +661,13 @@
             <span class="pl-link">View Reach Mowers →</span>
           </div>
         </a>
-        <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/virnig/">
-          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/07/V70_Drum-Mulcher_Featured_800px.jpg')"></div>
+        <a class="pl-row" href="https://www.dte-equipment.com.au/product-category/greentec/cutterbars/">
+          <div class="pl-thumb" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/06/HL-152-Featured-image.png')"></div>
           <div class="pl-body">
-            <span class="pl-tag">Skid Steer</span>
-            <h3>Skid Steer Cutters</h3>
-            <p>Virnig slashers, drum and disc mulchers matched to your skid steer's flow and frame.</p>
-            <span class="pl-link">View Skid Steer Range →</span>
+            <span class="pl-tag">Greentec</span>
+            <h3>Cutterbars</h3>
+            <p>High-performance Greentec cutterbars for fast, clean hedge and canopy work.</p>
+            <span class="pl-link">View Cutterbars →</span>
           </div>
         </a>
       </div>
@@ -623,12 +676,11 @@
 </section>
 
 <!-- ===== APPLICATIONS (upgrade thin market pages — slide 12 application hubs) ===== -->
-<section class="section apps" id="applications">
+<section class="section apps m-accordion" id="applications">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Matched To The Job</span>
-      <h2>Smarter Ways To Work, By Application</h2>
-      <p>From orchard rows to roadside verges, we work these jobs with our customers every day. Tell us yours and we'll match you to machinery proven in the paddock, on the block and on the job site.</p>
+      <h2>Work Smarter</h2>
+      <p>We offer more than just equipment. We offer expertise in each market, so we can recommend the right attachment for any job.</p>
     </div>
     <div class="apps-grid">
       <a class="acard" href="https://www.dte-equipment.com.au/orchards/">
@@ -636,16 +688,16 @@
         <div class="ac-body"><h3>Orchards</h3><p>Quadsaws, hedge cutters and cutterbars for faster, smoother pruning.</p><span class="ac-link">Explore Orchards →</span></div>
       </a>
       <a class="acard" href="https://www.dte-equipment.com.au/municipality/">
-        <div class="ac-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2022/09/Reach-Mower.jpg')"></div>
-        <div class="ac-body"><h3>Municipality</h3><p>Reach mowers, verge and boom mowers for roadsides and public land.</p><span class="ac-link">Explore Municipality →</span></div>
+        <div class="ac-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/09/Scorpion-630-FR-1903x840-1.webp')"></div>
+        <div class="ac-body"><h3>Roadside</h3><p>Reach mowers, verge and boom mowers for roadsides and public land.</p><span class="ac-link">Explore Roadside →</span></div>
       </a>
       <a class="acard" href="https://www.dte-equipment.com.au/forestry/">
-        <div class="ac-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/08/Forestry_1_50_50_card_768x550-768x550.jpg.webp')"></div>
-        <div class="ac-body"><h3>Forestry</h3><p>Mulchers and disc heads built to clear, mulch and reclaim land.</p><span class="ac-link">Explore Forestry →</span></div>
+        <div class="ac-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/08/TDM-stump-grind_800x500-1.jpg')"></div>
+        <div class="ac-body"><h3>Land Clearing &amp; Mulching</h3><p>Disc and drum mulchers built to clear, mulch and reclaim land.</p><span class="ac-link">Explore Land Clearing →</span></div>
       </a>
       <a class="acard" href="https://www.dte-equipment.com.au/agriculture/">
         <div class="ac-bg" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2023/08/1692597721975.jpg')"></div>
-        <div class="ac-body"><h3>Agriculture</h3><p>Flail mowers, slashers and mulchers for paddocks, fence lines and scrub.</p><span class="ac-link">Explore Agriculture →</span></div>
+        <div class="ac-body"><h3>Leucaena</h3><p>Flail mowers, slashers and cutterbars for paddocks, fence lines and leucaena rows.</p><span class="ac-link">Explore Leucaena →</span></div>
       </a>
     </div>
   </div>
@@ -655,21 +707,20 @@
 <section class="section brands" id="brands">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Shop by Brand</span>
       <h2>Market-Leading Partners</h2>
-      <p>We hand-pick the brands that meet our quality standards and stand behind every machine we sell, as the exclusive Australia &amp; New Zealand distributor.</p>
+      <p>We partner with Greentec and Virnig, two of the world's leading vegetation-management manufacturers, as their exclusive distributor across Australia and New Zealand. We stand behind every attachment we supply.</p>
     </div>
     <div class="brand-row">
       <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/greentec/">
-        <div class="bp-img" style="background-image:url('images/greentec-logo.png')"></div>
+        <div class="bp-img"><img src="images/greentec-logo.png" alt="Greentec logo"></div>
         <div class="bp-body">
           <span class="bp-name">Greentec</span>
-          <span class="bp-desc">Boom arms · Quadsaws · Cutterbars</span>
+          <span class="bp-desc">Reach Mowers · Quadsaws · Multi Carriers</span>
           <span class="bp-link">View Range →</span>
         </div>
       </a>
       <a class="brand-pill" href="https://www.dte-equipment.com.au/product-category/virnig/">
-        <div class="bp-img" style="background-image:url('images/virnig-logo.jpeg')"></div>
+        <div class="bp-img"><img src="images/virnig-logo.jpeg" alt="Virnig logo"></div>
         <div class="bp-body">
           <span class="bp-name">Virnig</span>
           <span class="bp-desc">Skid steer &amp; excavator attachments</span>
@@ -687,20 +738,19 @@
       <div>
         <span class="eyebrow">Why DTE Equipment</span>
         <h2>A Partner In The Work, Not Just The Purchase</h2>
-        <p>Choosing a machine is easy. Choosing the right solution for your crop, your country and your carrier is where we earn our keep. With more than 50 years of combined experience in vegetation management, we start every conversation with the job, not the catalogue.</p>
+        <p>Choosing a machine is easy. Choosing the right solution for your crop, your conditions and your vehicle is where we earn our keep. With more than 50 years of combined experience in vegetation management, we start every conversation with the job, not the catalogue.</p>
         <ul class="why-list">
           <li><b>Application knowledge</b> earned in orchards, forestry, councils and farms across Australia and New Zealand</li>
-          <li><b>The right solution, not just a machine</b>, matched to your job, your carrier and your budget</li>
+          <li><b>The right solution, not just a machine</b>, matched to your job, your vehicle and your budget</li>
           <li><b>Advice grounded in productivity and return</b>, so the investment stacks up commercially</li>
-          <li><b>Less downtime and operational risk</b>, with proven machines and local parts backup</li>
-          <li><b>Setup, training and after-sales support</b> for the life of the machine</li>
-          <li><b>Confidence in your investment</b>, backed by the exclusive AU &amp; NZ distributor</li>
+          <li><b>Less downtime and operational risk</b>, with proven attachments and local parts backup</li>
+          <li><b>Setup, training and after-sales support</b> for the life of the attachment, so you can invest with confidence</li>
         </ul>
         <div class="why-quote">"I'd liken it to finding a Gold Nugget." Alf Pappalardo, Marathon Man Go</div>
         <a class="btn btn-primary" href="https://www.dte-equipment.com.au/about/">About DTE Equipment</a>
       </div>
       <div class="why-image">
-        <img src="https://www.dte-equipment.com.au/wp-content/uploads/2023/09/DSC_4900-scaled.jpg" alt="DTE Equipment machinery working smarter in the field">
+        <img src="https://www.dte-equipment.com.au/wp-content/uploads/2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-032-Resized.jpg" alt="Greentec Quadsaw pruning a mango orchard in North Queensland">
       </div>
     </div>
   </div>
@@ -710,43 +760,64 @@
 <section class="section" id="stories">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Proven In The Field</span>
-      <h2>Customer Success Stories</h2>
-      <p>Real operations, real results. How customers across Australia are working faster, safer and more profitably with equipment matched by DTE.</p>
+      <h2>Partner Success Stories</h2>
+      <p>Real operations, real results. How partners across Australia and New Zealand are working faster, safer and more profitably with attachments matched by DTE.</p>
     </div>
-    <div class="story-grid">
-      <a class="scard" href="https://www.dte-equipment.com.au/saves-time-money-and-physical-strain-howard-meltzer-mechanizes-orchard-hedging/">
-        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/Saves-time-money-and-sore-backs-7-e1771363971773.png')"></div>
-        <div class="s-body">
-          <span class="s-result">Pruning 2,000 trees in ~10 days</span>
-          <h3>Mechanised Hedging at Yellingbo Olive Grove</h3>
-          <blockquote>Moving from hand pruning to a Quadsaw system saves time, money and physical strain, and Howard wishes he'd done it earlier.</blockquote>
-          <div class="s-name">Howard Meltzer, Yellingbo Olive Grove, VIC</div>
-          <span class="s-link">Read the Story →</span>
-        </div>
-      </a>
-      <a class="scard" href="https://www.dte-equipment.com.au/mango-pruning-a-gold-nugget/">
-        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/20230215-Greentec-Quadsaw-Marathon-Man-Go-001-Resized-scaled.jpg')"></div>
-        <div class="s-body">
-          <span class="s-result">Faster, cleaner mango pruning</span>
-          <h3>Mango Pruning in the Burdekin</h3>
-          <blockquote>"I'd liken it to finding a Gold Nugget."</blockquote>
-          <div class="s-name">Alf Pappalardo, Marathon Man Go, North QLD</div>
-          <span class="s-link">Read the Story →</span>
-        </div>
-      </a>
-      <a class="scard" href="https://www.dte-equipment.com.au/jack-evans-hedging-at-pinecliff-freedman-racing/">
-        <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/04/jack-evans-thumbnail1-e1777331274584.jpg')"></div>
-        <div class="s-body">
-          <span class="s-result">Productivity lift on the Mornington Peninsula</span>
-          <h3>Hedging at Pinecliff, Freedman Racing</h3>
-          <blockquote>How Jack Evans improved productivity at the Pinecliffe training facility with the Greentec Quadsaw.</blockquote>
-          <div class="s-name">Jack Evans, Pinecliff Freedman Racing, VIC</div>
-          <span class="s-link">Read the Story →</span>
-        </div>
-      </a>
+    <div class="story-scroller">
+      <div class="story-grid">
+        <a class="scard" href="https://www.dte-equipment.com.au/saves-time-money-and-physical-strain-howard-meltzer-mechanizes-orchard-hedging/">
+          <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/Saves-time-money-and-sore-backs-7-e1771363971773.png')"></div>
+          <div class="s-body">
+            <span class="s-result">Hand pruning eliminated</span>
+            <h3>Mechanised Hedging at Yellingbo Olive Grove</h3>
+            <blockquote>Moving from hand pruning to a Quadsaw system saves time, money and physical strain, and Howard wishes he'd done it earlier.</blockquote>
+            <div class="s-name">Howard Meltzer, Yellingbo Olive Grove, VIC</div>
+            <span class="s-link">Read the Full Case Study →</span>
+          </div>
+        </a>
+        <a class="scard" href="https://www.dte-equipment.com.au/mango-pruning-a-gold-nugget/">
+          <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/02/20230215-Greentec-Quadsaw-Marathon-Man-Go-001-Resized-scaled.jpg')"></div>
+          <div class="s-body">
+            <span class="s-result">90,000 trees pruned a season</span>
+            <h3>Mango Pruning in the Burdekin</h3>
+            <blockquote>"I'd liken it to finding a Gold Nugget."</blockquote>
+            <div class="s-name">Alf Pappalardo, Marathon Man Go, North QLD</div>
+            <span class="s-link">Read the Full Case Study →</span>
+          </div>
+        </a>
+        <a class="scard" href="https://www.dte-equipment.com.au/jack-evans-hedging-at-pinecliff-freedman-racing/">
+          <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2026/04/jack-evans-thumbnail1-e1777331274584.jpg')"></div>
+          <div class="s-body">
+            <span class="s-result">Productivity lift on the Mornington Peninsula</span>
+            <h3>Hedging at Pinecliff, Freedman Racing</h3>
+            <blockquote>How Jack Evans improved productivity at the Pinecliffe training facility with the Greentec Quadsaw.</blockquote>
+            <div class="s-name">Jack Evans, Pinecliff Freedman Racing, VIC</div>
+            <span class="s-link">Read the Full Case Study →</span>
+          </div>
+        </a>
+        <a class="scard" href="https://www.dte-equipment.com.au/greentec-quadsaw-customer-story/">
+          <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/10/Your-paragraph-text-13.jpg')"></div>
+          <div class="s-body">
+            <span class="s-result">Hours of work saved on-orchard</span>
+            <h3>Strong, Robust and Saves Hours of Work</h3>
+            <blockquote>"Strong, robust, and it saves us hours of work." David Gunson on the Greentec Quadsaw.</blockquote>
+            <div class="s-name">David Gunson, Orchardist, New Zealand</div>
+            <span class="s-link">Read the Full Case Study →</span>
+          </div>
+        </a>
+        <a class="scard" href="https://www.dte-equipment.com.au/virnig-v70-disc-mulcher-performance/">
+          <div class="s-img" style="background-image:url('https://www.dte-equipment.com.au/wp-content/uploads/2025/08/TDM-stump-grind_800x500-1.jpg')"></div>
+          <div class="s-body">
+            <span class="s-result">Clearing large timber, no mercy</span>
+            <h3>Virnig V70 Disc Mulcher In Action</h3>
+            <blockquote>See the Virnig V70 disc mulcher clear standing timber and grind stumps on a commercial job site.</blockquote>
+            <div class="s-name">Virnig V70 Tree Disc Mulcher</div>
+            <span class="s-link">Read the Full Case Study →</span>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="stories-foot">More stories and buyer guides in <a href="https://www.dte-equipment.com.au/news/">News &amp; Guides</a>, including <a href="https://www.dte-equipment.com.au/what-size-telehandler-do-i-need-for-a-greentec-quadsaw-multi-carrier/">what size telehandler you need for a Quadsaw &amp; Multi Carrier</a>.</div>
+    <div class="stories-foot"><a class="news-cta" href="https://www.dte-equipment.com.au/news/">More Stories &amp; Buyer Guides <span class="arr">→</span></a></div>
   </div>
 </section>
 
@@ -756,24 +827,24 @@
     <div>
       <span class="eyebrow">Work Smarter</span>
       <h2>Talk to a Specialist Today</h2>
-      <p>Tell us what you're working on and we'll give you straight advice on the right solution, the carrier match and the return you can expect, before you spend a dollar. Phone is fastest.</p>
+      <p>Tell us what you're working on and we'll give you straight advice on the right solution and the return you can expect, before you invest.</p>
       <div class="lead-ctas">
         <a class="phone-big" href="tel:0753158020">07 5315 8020</a>
       </div>
       <p class="lead-proof">"Delivered to Brisbane, assisted with the setup and got me going. Followed up a couple of weeks later to see how the equipment was going." Mick Andrew, Farmer</p>
       <div class="lead-ctas" style="margin-top:20px">
         <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/downloads/">Download Brochure</a>
-        <a class="btn btn-ghost" href="https://www.dte-equipment.com.au/contact/">Book a Discovery Call</a>
       </div>
     </div>
     <div class="quote-box">
       <h3>Get a Quote</h3>
-      <div class="qb-sub">Quick form. We'll be in touch within one business day.</div>
-      <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-      <div class="field"><label>Phone</label><input type="tel" placeholder="Mobile or landline"></div>
-      <div class="field"><label>Email</label><input type="email" placeholder="you@business.com.au"></div>
-      <div class="field"><label>What are you working on?</label>
-        <select><option>Select application</option><option>Orchards</option><option>Forestry</option><option>Municipality / roadside</option><option>Agriculture</option><option>Other</option></select>
+      <div class="qb-sub">Fill out the form and we will be in touch shortly.</div>
+      <div class="field"><label>Name <span class="req">*</span></label><input type="text" placeholder="Your name" required></div>
+      <div class="field"><label>Mobile <span class="req">*</span></label><input type="tel" placeholder="Your mobile number" required></div>
+      <div class="field"><label>Email <span class="req">*</span></label><input type="email" placeholder="you@business.com.au" required></div>
+      <div class="field"><label>Postcode <span class="req">*</span></label><input type="text" inputmode="numeric" placeholder="e.g. 4000" required></div>
+      <div class="field"><label>What are you working on? <span class="req">*</span></label>
+        <select required><option value="">Select application</option><option>Orchards</option><option>Roadside</option><option>Land Clearing &amp; Mulching</option><option>Leucaena</option><option>Other</option></select>
       </div>
       <a class="btn btn-primary" href="https://www.dte-equipment.com.au/contact/" style="width:100%;justify-content:center">Request My Quote</a>
       <div class="qb-note">Prefer to talk? Call 07 5315 8020</div>
@@ -787,16 +858,17 @@
     <div class="foot-grid">
       <div>
         <div class="f-logo"><img src="https://www.dte-equipment.com.au/wp-content/uploads/2018/12/DTE-logo_-white-_-yellow.-png-v2.png" alt="DTE Equipment"></div>
-        <p class="f-intro">Driven by a desire to always deliver 'Smarter Ways To Work', we constantly rethink the day-to-day and find ways to improve our customers' operations.</p>
+        <p class="f-intro">Driven by a desire to always deliver 'Work Smarter', we deliver more than equipment: real expertise and the right solutions to improve our partners' operations.</p>
         <p class="f-contact"><a href="tel:0753158020">07 5315 8020</a></p>
       </div>
       <div>
-        <h4>Machines</h4>
+        <h4>Products</h4>
         <ul>
-          <li><a href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">Greentec Flail Mowers</a></li>
-          <li><a href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-drum-mulchers/">Forestry Mulchers</a></li>
+          <li><a href="https://www.dte-equipment.com.au/product-category/greentec/quadsaws/">Quadsaws</a></li>
           <li><a href="https://www.dte-equipment.com.au/product-category/greentec/boom-arms/">Reach Mowers</a></li>
-          <li><a href="https://www.dte-equipment.com.au/product-category/virnig/">Skid Steer Cutters</a></li>
+          <li><a href="https://www.dte-equipment.com.au/product-category/virnig/skid-steer-disc-mulchers/">Disc &amp; Drum Mulchers</a></li>
+          <li><a href="https://www.dte-equipment.com.au/product-category/greentec/flail-mowers/">Greentec Flail Mowers</a></li>
+          <li><a href="https://www.dte-equipment.com.au/product-category/greentec/cutterbars/">Cutterbars</a></li>
           <li><a href="https://www.dte-equipment.com.au/products/">All Products</a></li>
         </ul>
       </div>
@@ -804,9 +876,9 @@
         <h4>Applications</h4>
         <ul>
           <li><a href="https://www.dte-equipment.com.au/orchards/">Orchards</a></li>
-          <li><a href="https://www.dte-equipment.com.au/municipality/">Municipality</a></li>
-          <li><a href="https://www.dte-equipment.com.au/forestry/">Forestry</a></li>
-          <li><a href="https://www.dte-equipment.com.au/agriculture/">Agriculture</a></li>
+          <li><a href="https://www.dte-equipment.com.au/municipality/">Roadside</a></li>
+          <li><a href="https://www.dte-equipment.com.au/forestry/">Land Clearing &amp; Mulching</a></li>
+          <li><a href="https://www.dte-equipment.com.au/agriculture/">Leucaena</a></li>
         </ul>
       </div>
       <div>
@@ -831,6 +903,16 @@
 <div class="mobile-cta-bar" aria-label="Quick contact actions">
   <a class="btn btn-primary" href="#finder">Find Your Machine</a>
   <a class="btn btn-dark" href="tel:0753158020">Call Now</a>
+</div>
+
+<div class="desktop-cta-bar" aria-label="Quick actions">
+  <div class="wrap">
+    <span class="dcb-text">Ready to find the right attachment?</span>
+    <div class="dcb-actions">
+      <a class="btn btn-primary" href="#finder">Find Your Machine</a>
+      <a class="btn btn-ghost" href="tel:0753158020">Talk to a Specialist</a>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -859,17 +941,20 @@
 
   // Mobile sticky CTA appears after the finder section and hides while scrolling down
   var mobileCta=document.querySelector('.mobile-cta-bar'),
+      desktopCta=document.querySelector('.desktop-cta-bar'),
       finder=document.getElementById('finder'),
       lastScrollY=window.pageYOffset||document.documentElement.scrollTop,
       ticking=false,
-      mobileQuery=window.matchMedia('(max-width: 640px)');
+      mobileQuery=window.matchMedia('(max-width: 640px)'),
+      desktopQuery=window.matchMedia('(min-width: 1101px)');
   function updateMobileCta(){
-    if(!mobileCta||!finder){return}
+    if(!finder){return}
     var currentY=window.pageYOffset||document.documentElement.scrollTop,
         finderBottom=finder.offsetTop+finder.offsetHeight,
         pastFinder=currentY>finderBottom,
         scrollingDown=currentY>lastScrollY;
-    mobileCta.classList.toggle('is-visible',mobileQuery.matches&&pastFinder&&!scrollingDown);
+    if(mobileCta){mobileCta.classList.toggle('is-visible',mobileQuery.matches&&pastFinder&&!scrollingDown)}
+    if(desktopCta){desktopCta.classList.toggle('is-visible',desktopQuery.matches&&pastFinder)}
     lastScrollY=Math.max(currentY,0);
     ticking=false;
   }
@@ -882,6 +967,29 @@
   window.addEventListener('scroll',requestMobileCtaUpdate,{passive:true});
   window.addEventListener('resize',requestMobileCtaUpdate);
   updateMobileCta();
+
+  // Mobile accordion for the heavier sections (collapse to shorten the mobile scroll)
+  if(window.matchMedia('(max-width: 640px)').matches){
+    document.querySelectorAll('.m-accordion').forEach(function(sec,i){
+      var wrap=sec.querySelector('.wrap'),head=sec.querySelector('.section-head');
+      if(!wrap||!head){return}
+      var h2=head.querySelector('h2');
+      if(!h2){return}
+      var body=document.createElement('div');
+      body.className='m-acc-body';
+      head.querySelectorAll('p').forEach(function(p){body.appendChild(p)});
+      var sib=head.nextElementSibling;
+      while(sib){var next=sib.nextElementSibling;body.appendChild(sib);sib=next}
+      wrap.appendChild(body);
+      h2.classList.add('m-acc-toggle');
+      h2.setAttribute('role','button');
+      h2.setAttribute('tabindex','0');
+      function toggle(){sec.classList.toggle('open')}
+      h2.addEventListener('click',toggle);
+      h2.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+      if(i===0){sec.classList.add('open')}
+    });
+  }
 </script>
 </body>
 </html>

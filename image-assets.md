@@ -4,7 +4,11 @@ All images in the mock-up are **hotlinked from the live DTE WordPress media libr
 
 | Section | Element | Live URL |
 |---|---|---|
-| Hero | Background | `2023/09/20230215-Greentec-Quadsaw-Marathon-Man-Go-010-Resized-scaled.jpg` |
+| Hero | Background (July 2026: Virnig V70 disc mulcher, attachment clearly visible) | `2025/08/TDM-stump-grind_800x500-1.jpg` |
+| Find Your Machine → By Attachment Type | Quadsaw / Reach Mower / Disc Mulcher / Drum Mulcher tiles | `2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-012-Resized-1024x683.jpg` · `2023/09/Scorpion-630-FR-1903x840-1.webp` · `2025/07/V70-Tree-Disc-Mulcher_Featured.jpg` · `2025/07/V70_Drum-Mulcher_Featured_800px.jpg` |
+| Partners | Most-requested attachment tiles (Reach Mowers, Quadsaws, Multi Carriers) | `2023/09/Scorpion-630-FR-1903x840-1-1024x452.webp` · `2023/06/20230215-...-012-Resized-1024x683.jpg` · `2023/04/DSC_4362-Fritlagt-HXF-2802-1-scaled.jpg` |
+| Why DTE | Australian orchard Quadsaw (replaced non-Australian shot) | `2023/06/20230215-Greentec-Quadsaw-Marathon-Man-Go-032-Resized.jpg` |
+| Stories carousel | 5th card (Virnig V70 disc mulcher action) | `2025/08/TDM-stump-grind_800x500-1.jpg` |
 | Header / Footer | Logo (black), Logo (white) | `2022/08/DTE-logo.-black-_-yellow-png-cropped-v2.png` · `2018/12/DTE-logo_-white-_-yellow.-png-v2.png` |
 | Machines | Flail mower | `2023/06/FR-92-Featured-image.png` |
 | Machines | Forestry mulcher (Virnig drum) | `2025/07/V70_Drum-Mulcher_Featured_800px.jpg` |
