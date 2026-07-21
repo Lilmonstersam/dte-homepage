@@ -162,9 +162,9 @@
   .hero h1 .l1{display:block;color:#fff}
   .hero h1 .l2{display:block;color:var(--dte-yellow)}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
-  .hero-trust{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:#e2e2e2}
-  .hero-trust span{display:flex;align-items:center;gap:8px;position:relative}
-  .hero-trust span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--dte-yellow);flex:0 0 4px}
+  .hero-trust{display:flex;gap:20px 26px;flex-wrap:wrap;font-size:14px;color:#e2e2e2}
+  .hero-trust span{position:relative;display:block;padding-left:15px;line-height:1.4;max-width:300px}
+  .hero-trust span::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--dte-yellow)}
   .hero-trust b{color:#fff}
 
   /* ---------- PATHWAY FINDER (the core CRO addition) ---------- */
@@ -391,6 +391,8 @@
     .m-accordion .m-acc-body{display:none;margin-top:20px}
     .m-accordion.open .m-acc-body{display:block}
     .hero h1{font-size:29px;line-height:1.12;letter-spacing:0}
+    .hero-trust{flex-direction:column;gap:12px}
+    .hero-trust span{max-width:none}
     .hero p.lede{font-size:16.5px}
     .hero{min-height:480px;padding:56px 0}
     .hero-inner{padding-left:18px}
