@@ -240,8 +240,8 @@
   .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
     transition:.2s;background:#fff;box-shadow:var(--shadow-sm)}
   .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow);transform:translateY(-4px)}
-  .brand-pill .bp-img{height:180px;display:flex;align-items:center;justify-content:center;padding:24px 40px;background:#fff;border-bottom:1px solid var(--dte-line)}
-  .brand-pill .bp-img img{max-height:66px;width:auto;max-width:78%;object-fit:contain;display:block}
+  .brand-pill .bp-img{height:180px;display:flex;align-items:center;justify-content:center;padding:20px 26px;background:#fff;border-bottom:1px solid var(--dte-line)}
+  .brand-pill .bp-img img{max-height:130px;width:auto;max-width:92%;object-fit:contain;display:block}
   .brand-pill .bp-body{padding:22px 24px 26px}
   .brand-pill .bp-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:.01em;display:block;margin-bottom:6px}
   .brand-pill .bp-desc{font-size:13.5px;color:var(--dte-grey);display:block;margin-bottom:14px}
@@ -342,14 +342,18 @@
     .priority-feature{min-height:340px}
     .why-grid,.lead .wrap{grid-template-columns:1fr;gap:30px}
     .hero h1{font-size:46px}
-    nav.primary,.nav-cta .btn{display:none}
-    .burger{display:block}
+    nav.primary,.nav-cta{display:none}
+    .burger{display:block;flex:0 0 auto}
     .foot-grid{grid-template-columns:1fr 1fr}
+    /* header tightened so the burger always fits */
+    header.main .wrap{gap:12px;height:84px}
+    .logo{min-width:0}
+    .logo img{height:40px}
     /* phone moves into the sticky header so it's always reachable */
     .topbar{display:none}
-    .header-phone{display:inline-flex;align-items:center;gap:7px;margin-left:auto;margin-right:14px;
-      font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:var(--dte-ink);white-space:nowrap}
-    .header-phone svg{width:18px;height:18px;fill:var(--dte-yellow);flex:0 0 18px}
+    .header-phone{display:inline-flex;align-items:center;gap:6px;margin-left:auto;
+      font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:17px;color:var(--dte-ink);white-space:nowrap}
+    .header-phone svg{width:17px;height:17px;fill:var(--dte-yellow);flex:0 0 17px}
   }
   @media(max-width:640px){
     body{padding-bottom:78px}
@@ -389,7 +393,14 @@
     .hero{min-height:480px;padding:56px 0}
     .hero-inner{padding-left:20px}
     .section-head h2,.lead h2,.why h2{font-size:27px}
+    .section-head h2{margin-bottom:10px}
     .section-head p{font-size:15.5px}
+    /* header tightened further so the burger never clips on small phones */
+    header.main .wrap{height:66px;gap:8px;padding:0 14px}
+    .logo img{height:32px}
+    .header-phone{font-size:15px;gap:5px}
+    .header-phone svg{width:16px;height:16px;flex:0 0 16px}
+    .burger{font-size:24px}
     .topbar .tb-left{gap:14px;font-size:12px}
     .topbar .tb-left span{display:none} /* drop distributor line on small screens */
     .why-image{min-height:220px}
@@ -627,7 +638,7 @@
 </section>
 
 <!-- ===== MACHINE TYPE HUBS (slide 11 + 12 — the SEO build targets, surfaced on homepage) ===== -->
-<section class="section m-accordion" id="machines">
+<section class="section" id="machines">
   <div class="wrap">
     <div class="section-head">
       <h2>Our Most In-Demand Machines</h2>
@@ -676,7 +687,7 @@
 </section>
 
 <!-- ===== APPLICATIONS (upgrade thin market pages — slide 12 application hubs) ===== -->
-<section class="section apps m-accordion" id="applications">
+<section class="section apps" id="applications">
   <div class="wrap">
     <div class="section-head">
       <h2>Work Smarter</h2>
