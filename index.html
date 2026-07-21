@@ -158,7 +158,7 @@
   @media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
   .hero-inner{max-width:680px;text-align:left;border-left:3px solid var(--dte-yellow);padding-left:28px}
   .hero .eyebrow{font-size:16px;font-weight:800;letter-spacing:.16em;color:#FFD673;text-shadow:0 2px 6px rgba(0,0,0,.6);margin-bottom:18px}
-  .hero h1{font-size:62px;line-height:1.04;margin:0 0 34px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+  .hero h1{font-size:62px;line-height:1.04;margin:0 0 34px;text-shadow:0 2px 10px rgba(0,0,0,.45);text-wrap:balance}
   .hero h1 .l1{display:block;color:#fff}
   .hero h1 .l2{display:block;color:var(--dte-yellow)}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
@@ -240,8 +240,9 @@
   .brand-pill{border:1px solid var(--dte-line);border-radius:var(--radius);overflow:hidden;
     transition:.2s;background:#fff;box-shadow:var(--shadow-sm)}
   .brand-pill:hover{border-color:var(--dte-yellow);box-shadow:var(--shadow);transform:translateY(-4px)}
-  .brand-pill .bp-img{height:180px;display:flex;align-items:center;justify-content:center;padding:20px 26px;background:#fff;border-bottom:1px solid var(--dte-line)}
-  .brand-pill .bp-img img{max-height:130px;width:auto;max-width:92%;object-fit:contain;display:block}
+  .brand-pill .bp-img{height:170px;display:flex;align-items:center;justify-content:center;padding:18px 26px;background:#fff;border-bottom:1px solid var(--dte-line)}
+  /* fixed height forces both logos to the same optical size so they line up */
+  .brand-pill .bp-img img{height:104px;width:auto;max-width:100%;object-fit:contain;display:block}
   .brand-pill .bp-body{padding:22px 24px 26px}
   .brand-pill .bp-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:.01em;display:block;margin-bottom:6px}
   .brand-pill .bp-desc{font-size:13.5px;color:var(--dte-grey);display:block;margin-bottom:14px}
@@ -373,7 +374,8 @@
     .acard{min-height:150px}
     .acard p{display:none}
     .acard h3{font-size:18px}
-    .brand-pill .bp-img{height:130px;padding:18px}
+    .brand-pill .bp-img{height:140px;padding:16px}
+    .brand-pill .bp-img img{height:88px}
     /* condense In-Demand list rows: keep compact horizontal, drop body copy */
     .pl-row{flex-direction:row;padding:12px;gap:12px;align-items:center}
     .pl-thumb{width:84px;flex:0 0 84px;height:64px}
@@ -388,10 +390,10 @@
     .m-accordion.open .m-acc-toggle::after{transform:rotate(180deg)}
     .m-accordion .m-acc-body{display:none;margin-top:20px}
     .m-accordion.open .m-acc-body{display:block}
-    .hero h1{font-size:36px}
+    .hero h1{font-size:29px;line-height:1.12;letter-spacing:0}
     .hero p.lede{font-size:16.5px}
     .hero{min-height:480px;padding:56px 0}
-    .hero-inner{padding-left:20px}
+    .hero-inner{padding-left:18px}
     .section-head h2,.lead h2,.why h2{font-size:27px}
     .section-head h2{margin-bottom:10px}
     .section-head p{font-size:15.5px}
